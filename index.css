@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap");
 body {
   margin: 0px;
+  font-family: Nunito;
 }
 
 /*NAVIGATION BAR*/
@@ -26,31 +27,29 @@ body {
 .menu p {
   margin-left: 120px;
   font-size: 17px;
-  font-family: Nunito;
   font-weight: 300;
 }
 
-.menu__logo {
+.menu .menu__logo {
   margin-left: 50px;
 }
 
-.menu__search {
+.menu .menu__search {
   position: absolute;
   right: 50px;
 }
 
-.menu__input {
+.menu .menu__search .menu__input {
   border-radius: 30px;
-  background-color: white;
+  color: #f4f4f4;
   border-style: none;
   height: 25px;
   width: 250px;
   font-size: 15px;
-  font-family: Nunito;
   font-weight: 300;
 }
 
-.menu__button {
+.menu .menu__search .menu__button {
   margin-left: 7px;
   width: 30px;
   height: 30px;
@@ -72,20 +71,152 @@ body {
           align-items: flex-end;
 }
 
-.banner__photo {
+.banner .banner__photo {
   width: 100%;
 }
 
-.banner__title {
-  font-size: 37px;
-  font-family: Teko;
-  color: white;
+.banner .banner__text {
   position: absolute;
-  top: 350px;
-  right: 100px;
+  top: 220px;
+  right: 300px;
+  color: #f4f4f4;
 }
 
-.banner__corre {
+.banner .banner__text .banner__title {
+  font-size: 50px;
+  font-family: Teko;
+  margin-bottom: 0px;
+}
+
+.banner .banner__text .banner__title .banner__corre {
   color: #ff740f;
+}
+
+.banner .banner__text .banner__paragraph {
+  font-weight: 100;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.banner .banner__text .banner__button {
+  background-color: #ff740f;
+  height: 40px;
+  width: 200px;
+  font-size: 17px;
+  font-weight: 200;
+  color: #f4f4f4;
+  border-radius: 30px;
+  border-color: #ff740f;
+}
+
+/*ABOUT US*/
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about .about__title {
+  font-size: 50px;
+  font-family: Teko;
+  color: 17, 17, 17;
+}
+
+.about .about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.about .about__info .about__block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .about__info .about__text {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .about__info .about__text h1 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.about .about__info .about__text p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.about .about__info .about__text--whitechars {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.about .about__info .about__text--whitechars h1 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.about .about__info .about__text--whitechars p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.about img {
+  width: 100%;
 }
 /*# sourceMappingURL=index.css.map */
