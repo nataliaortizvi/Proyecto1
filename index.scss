@@ -215,6 +215,7 @@ h3 {
     }
 }
 
+/*ADVERTISEMENT*/
 .advertisement {
     background-color:rgb(17,17,17);
     display: flex;
@@ -260,6 +261,7 @@ h3 {
 
         p {
             margin-top: 50px;
+            font-weight: 100;
         }
 
         button {
@@ -273,6 +275,39 @@ h3 {
             border-color:  rgb(255, 116, 15);
             margin-top: 10px;
         }
+    }
+}
+
+/*FOOTER*/
+
+.footer {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(17,17,17);
+    margin-top: 70px;
+    padding: 30px;
+
+    p {
+        font-weight: 100;
+        margin-left: 150px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 2;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    .footer__menu {
+        display: flex;
+        flex-direction:column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .footer__logos {
+        margin-left: 150px;
     }
 }
 

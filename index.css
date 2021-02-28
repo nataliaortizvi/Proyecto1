@@ -271,6 +271,7 @@ h3 {
   border-color: #ff740f;
 }
 
+/*ADVERTISEMENT*/
 .advertisement {
   background-color: #111111;
   display: -webkit-box;
@@ -341,6 +342,7 @@ h3 {
 
 .advertisement .advertisement__info p {
   margin-top: 50px;
+  font-weight: 100;
 }
 
 .advertisement .advertisement__info button {
@@ -353,5 +355,55 @@ h3 {
   border-radius: 30px;
   border-color: #ff740f;
   margin-top: 10px;
+}
+
+/*FOOTER*/
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #111111;
+  margin-top: 70px;
+  padding: 30px;
+}
+
+.footer p {
+  font-weight: 100;
+  margin-left: 150px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 2;
+  color: white;
+  text-align: center;
+}
+
+.footer .footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer .footer__logos {
+  margin-left: 150px;
 }
 /*# sourceMappingURL=index.css.map */
