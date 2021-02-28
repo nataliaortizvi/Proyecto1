@@ -66,6 +66,7 @@ h3 {
   border-radius: 30px;
   background-color: white;
   border-color: white;
+  font-family: Nunito;
 }
 
 /*BANNER*/
@@ -101,10 +102,11 @@ h3 {
   height: 40px;
   width: 200px;
   font-size: 17px;
-  font-weight: 200;
+  font-weight: 500;
   color: #f4f4f4;
   border-radius: 30px;
   border-color: #ff740f;
+  font-family: Nunito;
 }
 
 /*ABOUT US*/
@@ -260,12 +262,13 @@ h3 {
 }
 
 .interaction .interaction__options button {
+  font-family: Nunito;
   margin-top: 10px;
   background-color: #ff740f;
   height: 40px;
   width: 200px;
   font-size: 17px;
-  font-weight: 200;
+  font-weight: 500;
   color: white;
   border-radius: 30px;
   border-color: #ff740f;
@@ -350,11 +353,113 @@ h3 {
   height: 40px;
   width: 100px;
   font-size: 17px;
-  font-weight: 200;
+  font-weight: 500;
   color: white;
   border-radius: 30px;
   border-color: #ff740f;
   margin-top: 10px;
+  font-family: Nunito;
+}
+
+/*NEWSLETTER*/
+.newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 200;
+  background-size: 100%;
+  height: 280px;
+  color: white;
+}
+
+.newsletter .newsletter__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 100px;
+}
+
+.newsletter .newsletter__titles h3 {
+  margin: 0px;
+  line-height: 1;
+  font-size: 40px;
+}
+
+.newsletter .newsletter__titles p {
+  font-weight: 300;
+}
+
+.newsletter .newsletter__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.newsletter .newsletter__form ::-webkit-input-placeholder {
+  color: white;
+}
+
+.newsletter .newsletter__form :-ms-input-placeholder {
+  color: white;
+}
+
+.newsletter .newsletter__form ::-ms-input-placeholder {
+  color: white;
+}
+
+.newsletter .newsletter__form ::placeholder {
+  color: white;
+}
+
+.newsletter .newsletter__form .newsletter__input {
+  border-radius: 30px;
+  height: 35px;
+  border-color: white;
+  border-style: solid;
+  width: 300px;
+  background: transparent;
+  font-family: Nunito;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 100;
+  margin-right: 10px;
+}
+
+.newsletter .newsletter__form button {
+  font-family: Nunito;
+  background-color: white;
+  height: 40px;
+  width: 310px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #df6813;
+  border-radius: 30px;
+  border-color: white;
+  margin-top: 25px;
 }
 
 /*FOOTER*/
@@ -373,7 +478,6 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #111111;
-  margin-top: 70px;
   padding: 30px;
 }
 
