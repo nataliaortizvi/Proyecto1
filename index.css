@@ -270,4 +270,88 @@ h3 {
   border-radius: 30px;
   border-color: #ff740f;
 }
+
+.advertisement {
+  background-color: #111111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0px;
+  color: white;
+}
+
+.advertisement img {
+  width: 100%;
+  height: 300px;
+}
+
+.advertisement .advertisement__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  margin-left: 70px;
+  width: 60%;
+}
+
+.advertisement .advertisement__info .title__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.advertisement .advertisement__info .title__text .title__number {
+  margin: 0px;
+  height: 90px;
+  font-size: 120px;
+  color: #ff740f;
+}
+
+.advertisement .advertisement__info .title__text .title__letter {
+  margin: 0px;
+  position: absolute;
+  top: 60px;
+  left: 158px;
+}
+
+.advertisement .advertisement__info p {
+  margin-top: 50px;
+}
+
+.advertisement .advertisement__info button {
+  background-color: #ff740f;
+  height: 40px;
+  width: 100px;
+  font-size: 17px;
+  font-weight: 200;
+  color: white;
+  border-radius: 30px;
+  border-color: #ff740f;
+  margin-top: 10px;
+}
 /*# sourceMappingURL=index.css.map */
