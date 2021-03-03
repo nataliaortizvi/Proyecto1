@@ -88,16 +88,15 @@ h3 {
 }
 
 .menu .menu__search .menu__button-bars {
-  margin-left: 5px;
-  background-color: rgba(0, 0, 0, 0);
-  border: rgba(0, 0, 0, 0);
+  display: none;
 }
 
 /*BANNER*/
 .banner {
-  background-size: 1500px;
+  background-size: 100%;
+  background-repeat: no-repeat;
   padding: 15%;
-  height: 350px;
+  height: auto;
 }
 
 .banner .banner__text {
@@ -555,11 +554,36 @@ h3 {
   .container .menu .menu__search .menu__input {
     display: none;
   }
-  .container .banner {
-    display: none;
+  .container .menu .menu__search .menu__button-bars {
+    display: inline;
+    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    border: rgba(0, 0, 0, 0);
   }
-  .container .about {
-    display: none;
+  .container .banner {
+    background-size: 300%;
+    padding: 15%;
+    height: auto;
+  }
+  .container .banner .banner__text {
+    margin-left: 0%;
+    color: #f4f4f4;
+  }
+  .container .about .about__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
   }
   .container .interaction {
     display: none;
