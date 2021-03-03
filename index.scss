@@ -4,6 +4,11 @@
 body {
     margin:0px;
     font-family: Nunito;
+
+    .container {
+        width: 100%;
+        margin:0 auto;
+    }
 }
 
 h3 {
@@ -19,28 +24,37 @@ h3 {
     position:fixed;
     width:100%;
     height: 65px;
+
     display: flex;
     flex-direction:row;
     align-items: center;
+    justify-content: center;
+    
     margin:0 auto;
     z-index: 100;
 
     p{
         color: rgb(221, 221, 221);
-        margin-left: 120px;
+        margin-right: 110px;
         font-size: 15px;
         font-weight: 300;
     }
 
     .menu__logo {
-        margin-left: 50px;
         width: 55px;
         height: 20px;
+        position: absolute;
+        left: 30px;
     }
     
     .menu__search {
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;
+
         position: absolute;
-        right: 50px;
+        right: 30px;
 
         .menu__input {
             border-radius: 30px;
@@ -55,13 +69,15 @@ h3 {
         }
         
         .menu__button {
-            margin-left: 7px;
-            width: 30px;
-            height: 30px;
-            border-radius: 30px;
-            background-color: white;
-            border-color: white;
-            font-family: Nunito;
+            margin-left: 5px;
+            background-color: rgba(0, 0, 0, 0.0);
+            border: rgba(0, 0, 0, 0.0);
+        }
+
+        .menu__button-bars {
+            margin-left: 5px;
+            background-color: rgba(0, 0, 0, 0.0);
+            border: rgba(0, 0, 0, 0.0);
         }
     }
 }
@@ -381,4 +397,61 @@ h3 {
     }
 }
 
+@media screen and (max-width: 411px) {
+    .container {
+        width:100%;
 
+        /*MENU*/
+        .menu {
+            width: 100%;
+
+            p {
+                display: none;
+            }
+
+            .menu__search {
+
+                .menu__input {
+                    display: none;
+                }
+                .menu__button {
+                }
+
+
+            }
+        }
+
+        /*BANNER*/
+        .banner {
+            display: none;
+        }
+
+        /*ABOUT*/
+        .about  {
+            display: none;
+        }
+
+        /*INTERACTION*/
+        .interaction {
+            display: none;
+        }
+
+
+        /*ADVERTISEMENT*/
+        .advertisement {
+            display: none;
+        }
+
+
+        /*NEWSLETTER*/
+        .newsletter {
+            display: none;
+        }
+
+
+        /*FOOTER*/
+        .footer {
+            display: none;
+        }
+    }
+}

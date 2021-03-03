@@ -5,6 +5,11 @@ body {
   font-family: Nunito;
 }
 
+body .container {
+  width: 100%;
+  margin: 0 auto;
+}
+
 h3 {
   font-size: 50px;
   font-family: Teko;
@@ -27,26 +32,43 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
   z-index: 100;
 }
 
 .menu p {
   color: #dddddd;
-  margin-left: 120px;
+  margin-right: 110px;
   font-size: 15px;
   font-weight: 300;
 }
 
 .menu .menu__logo {
-  margin-left: 50px;
   width: 55px;
   height: 20px;
+  position: absolute;
+  left: 30px;
 }
 
 .menu .menu__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
-  right: 50px;
+  right: 30px;
 }
 
 .menu .menu__search .menu__input {
@@ -60,13 +82,15 @@ h3 {
 }
 
 .menu .menu__search .menu__button {
-  margin-left: 7px;
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  background-color: white;
-  border-color: white;
-  font-family: Nunito;
+  margin-left: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0);
+}
+
+.menu .menu__search .menu__button-bars {
+  margin-left: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0);
 }
 
 /*BANNER*/
@@ -509,5 +533,45 @@ h3 {
 
 .footer .footer__logos {
   margin-left: 150px;
+}
+
+@media screen and (max-width: 411px) {
+  .container {
+    width: 100%;
+    /*MENU*/
+    /*BANNER*/
+    /*ABOUT*/
+    /*INTERACTION*/
+    /*ADVERTISEMENT*/
+    /*NEWSLETTER*/
+    /*FOOTER*/
+  }
+  .container .menu {
+    width: 100%;
+  }
+  .container .menu p {
+    display: none;
+  }
+  .container .menu .menu__search .menu__input {
+    display: none;
+  }
+  .container .banner {
+    display: none;
+  }
+  .container .about {
+    display: none;
+  }
+  .container .interaction {
+    display: none;
+  }
+  .container .advertisement {
+    display: none;
+  }
+  .container .newsletter {
+    display: none;
+  }
+  .container .footer {
+    display: none;
+  }
 }
 /*# sourceMappingURL=index.css.map */
