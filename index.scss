@@ -105,6 +105,7 @@ h3 {
             font-weight: 100;
             font-size: 20px;
             margin-bottom: 40px;
+            max-width: 340px;
         }
 
         .text__button {
@@ -153,41 +154,25 @@ h3 {
             align-items: center;
             justify-content: center;
 
+            h1 {
+                font-size: 25px;
+                font-weight: 500;
+                margin-bottom: 0px;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 300;
+            }
+
             .content__text {
                 position: absolute;
-                display: flex;
-                flex-direction:column;
-                align-items: center;
-    
-                h1 {
-                    font-size: 25px;
-                    font-weight: 500;
-                    margin-bottom: 0px;
-                }
-    
-                p {
-                    font-size: 18px;
-                    font-weight: 300;
-                }
+                margin: center;
             }
     
             .content__text--whitechars{
                 position: absolute;
-                display: flex;
-                flex-direction:column;
-                align-items: center;
                 color: white;
-    
-                h1 {
-                    font-size: 25px;
-                    font-weight: 500;
-                    margin-bottom: 0px;
-                }
-    
-                p {
-                    font-size: 18px;
-                    font-weight: 300;
-                }
             }
         }
     }
@@ -404,6 +389,13 @@ h3 {
         .menu {
             width: 100%;
 
+            .menu__logo {
+                width: 42px;
+                height: 15px;
+                position: absolute;
+                left: 30px;
+            }
+
             p {
                 display: none;
             }
@@ -416,7 +408,7 @@ h3 {
                 
                 .menu__button-bars {
                     display: inline;
-                    margin-left: 5px;
+                    margin-left: 10px;
                     background-color: rgba(0, 0, 0, 0.0);
                     border: rgba(0, 0, 0, 0.0);
                 }
@@ -426,12 +418,24 @@ h3 {
         /*BANNER*/
         .banner {
             background-size: 300%;
-            padding: 15%;
-            height: auto;
+            background-position-x: -250px;
+            height: 540px;
 
             .banner__text {
-                margin-left: 0%;
-                color: rgb(244, 244, 244);
+                margin-left: 25%;
+
+                .text__title{
+                    font-size: 43px;
+                    margin-top: 170px;
+                    width: 250px;
+                    line-height: 1.1;
+                }
+            
+                .text__paragraph {
+                    font-size: 18px;
+                    margin-bottom: 25px;
+                    width: 220px;
+                }
             }
             
         }
@@ -439,11 +443,7 @@ h3 {
         /*ABOUT*/
         .about  {
             .about__info{
-                display: flex;
                 flex-direction:column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
             }
         }
 

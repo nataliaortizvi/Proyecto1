@@ -118,6 +118,7 @@ h3 {
   font-weight: 100;
   font-size: 20px;
   margin-bottom: 40px;
+  max-width: 340px;
 }
 
 .banner .banner__text .text__button {
@@ -192,55 +193,25 @@ h3 {
           justify-content: center;
 }
 
-.about .about__info .information__block .content__text {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.about .about__info .information__block .content__text h1 {
+.about .about__info .information__block h1 {
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 0px;
 }
 
-.about .about__info .information__block .content__text p {
+.about .about__info .information__block p {
   font-size: 18px;
   font-weight: 300;
+}
+
+.about .about__info .information__block .content__text {
+  position: absolute;
+  margin: center;
 }
 
 .about .about__info .information__block .content__text--whitechars {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: white;
-}
-
-.about .about__info .information__block .content__text--whitechars h1 {
-  font-size: 25px;
-  font-weight: 500;
-  margin-bottom: 0px;
-}
-
-.about .about__info .information__block .content__text--whitechars p {
-  font-size: 18px;
-  font-weight: 300;
 }
 
 /*INTERACTION*/
@@ -548,6 +519,12 @@ h3 {
   .container .menu {
     width: 100%;
   }
+  .container .menu .menu__logo {
+    width: 42px;
+    height: 15px;
+    position: absolute;
+    left: 30px;
+  }
   .container .menu p {
     display: none;
   }
@@ -556,34 +533,34 @@ h3 {
   }
   .container .menu .menu__search .menu__button-bars {
     display: inline;
-    margin-left: 5px;
+    margin-left: 10px;
     background-color: rgba(0, 0, 0, 0);
     border: rgba(0, 0, 0, 0);
   }
   .container .banner {
     background-size: 300%;
-    padding: 15%;
-    height: auto;
+    background-position-x: -250px;
+    height: 540px;
   }
   .container .banner .banner__text {
-    margin-left: 0%;
-    color: #f4f4f4;
+    margin-left: 25%;
+  }
+  .container .banner .banner__text .text__title {
+    font-size: 43px;
+    margin-top: 170px;
+    width: 250px;
+    line-height: 1.1;
+  }
+  .container .banner .banner__text .text__paragraph {
+    font-size: 18px;
+    margin-bottom: 25px;
+    width: 220px;
   }
   .container .about .about__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
   }
   .container .interaction {
     display: none;
