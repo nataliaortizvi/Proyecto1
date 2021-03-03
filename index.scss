@@ -130,15 +130,9 @@ h3 {
     margin:0 auto;
     width: 100%;
 
-    .about__title {
-        font-size: 50px;
-        font-family: Teko;
-        color: (17,17,17);   
-    }
-
     img {
         width: 100%;
-     }
+    }
 
     .about__info{
         display: flex;
@@ -183,8 +177,8 @@ h3 {
     display: flex;
     flex-direction:row;
     align-items: center;
+    justify-content: center;
     background-color: rgb(249, 247, 249);
-    padding: 20px;
 
     .interaction__title {
         margin-left: 50px;
@@ -198,6 +192,14 @@ h3 {
         display: flex;
         flex-direction:column;
         align-items: flex-start;
+        padding: 0px;
+
+        .list__views {
+            display: flex;
+            flex-direction:column;
+            align-items: flex-start;
+            justify-content: center;
+        }
 
         input {
             margin-bottom: 30px;
@@ -385,6 +387,10 @@ h3 {
     .container {
         width:100%;
 
+        h3 {
+            font-size: 42px;
+        }
+
         /*MENU*/
         .menu {
             width: 100%;
@@ -399,19 +405,16 @@ h3 {
             p {
                 display: none;
             }
-
-            .menu__search {
-
-                .menu__input {
-                    display: none;
-                }
+             
+            .menu__input {
+                display: none;
+            }
                 
-                .menu__button-bars {
-                    display: inline;
-                    margin-left: 10px;
-                    background-color: rgba(0, 0, 0, 0.0);
-                    border: rgba(0, 0, 0, 0.0);
-                }
+            .menu__button-bars {
+                display: inline;
+                margin-left: 10px;
+                background-color: rgba(0, 0, 0, 0.0);
+                border: rgba(0, 0, 0, 0.0);
             }
         }
 
@@ -449,13 +452,35 @@ h3 {
 
         /*INTERACTION*/
         .interaction {
-            display: none;
+            flex-direction: column;
+
+            .interaction__title {
+                margin-left: 0px;
+                text-align: center;
+            }
+
+            .interaction__img {
+                width: 350px;
+                margin: 0px 0px 25px 0px;
+            }
+
+            .interaction__options {
+                align-items: flex-start;
+
+                .list__views {
+                    margin: 0px;
+                }
+
+                button {
+                    margin-bottom: 40px;
+                    margin-top: 5px;
+                }
+            }
         }
 
 
         /*ADVERTISEMENT*/
         .advertisement {
-            display: none;
         }
 
 

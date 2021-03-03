@@ -149,12 +149,6 @@ h3 {
   width: 100%;
 }
 
-.about .about__title {
-  font-size: 50px;
-  font-family: Teko;
-  color: 17, 17, 17;
-}
-
 .about img {
   width: 100%;
 }
@@ -226,8 +220,10 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #f9f7f9;
-  padding: 20px;
 }
 
 .interaction .interaction__title {
@@ -249,6 +245,23 @@ h3 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding: 0px;
+}
+
+.interaction .interaction__options .list__views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .interaction .interaction__options input {
@@ -516,6 +529,9 @@ h3 {
     /*NEWSLETTER*/
     /*FOOTER*/
   }
+  .container h3 {
+    font-size: 42px;
+  }
   .container .menu {
     width: 100%;
   }
@@ -528,10 +544,10 @@ h3 {
   .container .menu p {
     display: none;
   }
-  .container .menu .menu__search .menu__input {
+  .container .menu .menu__input {
     display: none;
   }
-  .container .menu .menu__search .menu__button-bars {
+  .container .menu .menu__button-bars {
     display: inline;
     margin-left: 10px;
     background-color: rgba(0, 0, 0, 0);
@@ -563,10 +579,30 @@ h3 {
             flex-direction: column;
   }
   .container .interaction {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .container .advertisement {
-    display: none;
+  .container .interaction .interaction__title {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .container .interaction .interaction__img {
+    width: 350px;
+    margin: 0px 0px 25px 0px;
+  }
+  .container .interaction .interaction__options {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .container .interaction .interaction__options .list__views {
+    margin: 0px;
+  }
+  .container .interaction .interaction__options button {
+    margin-bottom: 40px;
+    margin-top: 5px;
   }
   .container .newsletter {
     display: none;
