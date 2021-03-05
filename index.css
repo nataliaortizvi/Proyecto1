@@ -315,7 +315,7 @@ h3 {
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: relative;
-  margin-left: 70px;
+  margin-left: 50px;
   width: 60%;
 }
 
@@ -351,6 +351,7 @@ h3 {
 }
 
 .advertisement .advertisement__info p {
+  width: 320px;
   margin-top: 50px;
   font-weight: 100;
 }
@@ -364,7 +365,7 @@ h3 {
   color: white;
   border-radius: 30px;
   border-color: #ff740f;
-  margin-top: 10px;
+  margin-top: 5px;
   font-family: Nunito;
 }
 
@@ -603,6 +604,43 @@ h3 {
   .container .interaction .interaction__options button {
     margin-bottom: 40px;
     margin-top: 5px;
+  }
+  .container .advertisement {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .advertisement img {
+    height: 100%;
+  }
+  .container .advertisement .advertisement__info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 0px;
+  }
+  .container .advertisement .advertisement__info .title__text .title__number {
+    font-size: 90px;
+  }
+  .container .advertisement .advertisement__info .title__text .title__letter {
+    font-size: 35px;
+    top: 85px;
+    left: 45px;
+  }
+  .container .advertisement .advertisement__info p {
+    margin-top: 30px;
+    width: 300px;
+    text-align: center;
+  }
+  .container .advertisement .advertisement__info button {
+    margin-bottom: 20px;
   }
   .container .newsletter {
     display: none;
