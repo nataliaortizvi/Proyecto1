@@ -18,7 +18,7 @@ h3 {
 }
 
 
-/*NAVIGATION BAR*/
+////////////////////NAVIGATION BAR////////////////////
 .menu {
     background-color: rgba(0, 0, 0, 0.7);
     position:fixed;
@@ -54,7 +54,7 @@ h3 {
         justify-content: center;
 
         position: absolute;
-        right: 30px;
+        right: 15px;
 
         .menu__input {
             border-radius: 30px;
@@ -80,7 +80,7 @@ h3 {
     }
 }
 
-/*BANNER*/
+////////////////////BANNER////////////////////
 .banner {
     background-size: 100%;
     background-repeat: no-repeat;
@@ -122,7 +122,7 @@ h3 {
     }
 }
 
-/*ABOUT US*/
+////////////////////ABOUT US////////////////////
 .about  {
     display: flex;
     flex-direction:column;
@@ -172,7 +172,7 @@ h3 {
     }
 }
 
-/*INTERACTION*/
+////////////////////INTERACTION////////////////////
 .interaction {
     display: flex;
     flex-direction:row;
@@ -220,7 +220,7 @@ h3 {
     }
 }
 
-/*ADVERTISEMENT*/
+////////////////////ADVERTISEMENT////////////////////
 .advertisement {
     background-color:rgb(17,17,17);
     display: flex;
@@ -285,7 +285,29 @@ h3 {
     }
 }
 
-/*NEWSLETTER*/
+////////////////////SPECIFICATIONS////////////////////
+.specifications {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    background-color: rgb(240,240,240);
+    padding: 50px;
+
+    h3 {
+        margin: 0px;
+    }
+
+    p{
+        margin: 0px;
+    }
+
+    .specifications__list {
+        line-height: 2;
+        margin-left: 120px;
+    }
+}
+
+////////////////////NEWSLETTER////////////////////
 .newsletter {
     display: flex;
     flex-direction:row;
@@ -353,7 +375,7 @@ h3 {
     }
 }
 
-/*FOOTER*/
+////////////////////FOOTER////////////////////
 .footer {
     display: flex;
     flex-direction:row;
@@ -384,6 +406,8 @@ h3 {
     }
 }
 
+
+////////////////////RESPONSIVE////////////////////
 @media screen and (max-width: 650px) {
     .container {
         width:100%;
@@ -392,7 +416,7 @@ h3 {
             font-size: 42px;
         }
 
-        /*MENU*/
+        ////////////////////MENU////////////////////
         .menu {
             width: 100%;
 
@@ -419,7 +443,7 @@ h3 {
             }
         }
 
-        /*BANNER*/
+        ////////////////////BANNER////////////////////
         .banner {
             background-size: 300%;
             background-position-x: -250px;
@@ -444,14 +468,14 @@ h3 {
             
         }
 
-        /*ABOUT*/
+        ////////////////////ABOUT////////////////////
         .about  {
             .about__info{
                 flex-direction:column;
             }
         }
 
-        /*INTERACTION*/
+        ////////////////////INTERACTION////////////////////
         .interaction {
             flex-direction: column;
 
@@ -479,8 +503,7 @@ h3 {
             }
         }
 
-
-        /*ADVERTISEMENT*/
+        ////////////////////ADVERTISEMENT////////////////////
         .advertisement {
             flex-direction:column;
             align-items: center;
@@ -519,8 +542,22 @@ h3 {
             }
         }
 
+        ////////////////////SPECIFICATIONS////////////////////
+        .specifications {
+            flex-direction:column;
+            justify-content: center;
 
-        /*NEWSLETTER*/
+            .specifications__titles {
+                text-align: center;
+            }
+
+            .specifications__list {
+                margin-left: 0px;
+            }
+        }
+
+
+        ////////////////////NEWSLETTER////////////////////
         .newsletter {
             flex-direction: column;
             height: 340px;
@@ -549,8 +586,7 @@ h3 {
             }
         }
 
-
-        /*FOOTER*/
+        ////////////////////FOOTER////////////////////
         .footer {
             flex-direction: column;
 

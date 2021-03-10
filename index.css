@@ -16,7 +16,6 @@ h3 {
   color: 17, 17, 17;
 }
 
-/*NAVIGATION BAR*/
 .menu {
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -68,7 +67,7 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  right: 30px;
+  right: 15px;
 }
 
 .menu .menu__search .menu__input {
@@ -91,7 +90,6 @@ h3 {
   display: none;
 }
 
-/*BANNER*/
 .banner {
   background-size: 100%;
   background-repeat: no-repeat;
@@ -133,7 +131,6 @@ h3 {
   font-family: Nunito;
 }
 
-/*ABOUT US*/
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,7 +205,6 @@ h3 {
   color: white;
 }
 
-/*INTERACTION*/
 .interaction {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,7 +277,6 @@ h3 {
   border-color: #ff740f;
 }
 
-/*ADVERTISEMENT*/
 .advertisement {
   background-color: #111111;
   display: -webkit-box;
@@ -369,7 +364,34 @@ h3 {
   font-family: Nunito;
 }
 
-/*NEWSLETTER*/
+.specifications {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f0f0f0;
+  padding: 50px;
+}
+
+.specifications h3 {
+  margin: 0px;
+}
+
+.specifications p {
+  margin: 0px;
+}
+
+.specifications .specifications__list {
+  line-height: 2;
+  margin-left: 120px;
+}
+
 .newsletter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -470,7 +492,6 @@ h3 {
   margin-top: 25px;
 }
 
-/*FOOTER*/
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -522,13 +543,6 @@ h3 {
 @media screen and (max-width: 650px) {
   .container {
     width: 100%;
-    /*MENU*/
-    /*BANNER*/
-    /*ABOUT*/
-    /*INTERACTION*/
-    /*ADVERTISEMENT*/
-    /*NEWSLETTER*/
-    /*FOOTER*/
   }
   .container h3 {
     font-size: 42px;
@@ -641,6 +655,21 @@ h3 {
   }
   .container .advertisement .advertisement__info button {
     margin-bottom: 20px;
+  }
+  .container .specifications {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .specifications .specifications__titles {
+    text-align: center;
+  }
+  .container .specifications .specifications__list {
+    margin-left: 0px;
   }
   .container .newsletter {
     -webkit-box-orient: vertical;
