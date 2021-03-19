@@ -189,6 +189,7 @@ h3 {
         height: 340px;
         background-image: url(../images/frente.png);
         background-size: cover;
+        margin: 100px;
 
         &--front {
             display: flex;
@@ -213,6 +214,7 @@ h3 {
 
         &--back {
             display: flex;
+            height: 360px;
             background-image: url(../images/atras.png);
             background-size: cover;
         }
@@ -223,7 +225,9 @@ h3 {
         flex-direction:column;
         align-items: flex-start;
         padding: 0px;
-        margin: 100px;
+        margin: 0px;
+        margin-top: 150px;
+        margin-bottom: 150px;
 
         .list__views {
             display: flex;
@@ -552,16 +556,19 @@ h3 {
 
             .interaction__title {
                 margin-left: 0px;
+                margin-bottom: 0px;
                 text-align: center;
             }
 
             .interaction__img {
-                width: 350px;
-                margin: 0px 0px 25px 0px;
+                width: 300px;
+                height: 190px;
+                margin: 30px 0px 30px 0px;
             }
 
             .interaction__options {
                 align-items: flex-start;
+                margin: 20px;
 
                 .list__views {
                     margin: 0px;

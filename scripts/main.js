@@ -50,7 +50,7 @@ function handleForEach (elem, i) {
                 mainImage.classList.remove('interaction__img--side')
                 mainImage.classList.add('interaction__img--down')
                 break;
-            case 2:
+            case 3:
                 //back
                 mainImage.classList.remove('interaction__img--front')
                 mainImage.classList.remove('interaction__img--side')

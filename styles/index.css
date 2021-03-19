@@ -231,6 +231,7 @@ h3 {
   height: 340px;
   background-image: url(../images/frente.png);
   background-size: cover;
+  margin: 100px;
 }
 
 .interaction .interaction__img--front {
@@ -264,6 +265,7 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 360px;
   background-image: url(../images/atras.png);
   background-size: cover;
 }
@@ -280,7 +282,9 @@ h3 {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 0px;
-  margin: 100px;
+  margin: 0px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .interaction .interaction__options .list__views {
@@ -692,16 +696,19 @@ h3 {
   }
   .container .interaction .interaction__title {
     margin-left: 0px;
+    margin-bottom: 0px;
     text-align: center;
   }
   .container .interaction .interaction__img {
-    width: 350px;
-    margin: 0px 0px 25px 0px;
+    width: 300px;
+    height: 190px;
+    margin: 30px 0px 30px 0px;
   }
   .container .interaction .interaction__options {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin: 20px;
   }
   .container .interaction .interaction__options .list__views {
     margin: 0px;
