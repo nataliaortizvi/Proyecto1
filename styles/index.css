@@ -773,5 +773,35 @@ h3 {
   .container .footer .footer__logos {
     margin-left: 0px;
   }
+  .container .gallery {
+    height: 480px;
+  }
+  .container .gallery__current {
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  .container .gallery__options {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .container .gallery__small {
+    height: 50px;
+    width: 65px;
+    margin: 5px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

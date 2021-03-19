@@ -644,5 +644,31 @@ h3 {
                 margin-left: 0px;
             }
         }
+
+        ////////////////////GALLERY////////////////////
+        .gallery {
+            height: 480px;
+
+            &__current {
+                height: 250px;
+                margin-bottom: 20px;
+            }
+        
+            &__options {
+                background-color: rgba(0, 0, 0, 0.3);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            &__small {
+                height: 50px;
+                width: 65px;
+                margin: 5px;
+            }
+        }
     }
 }
