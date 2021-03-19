@@ -11,4 +11,6 @@ for(let i = 0; i < smalls.length; i++){
     }
     
     small.addEventListener('click', handleSmallClick);
+
+    if(i == 0) handleSmallClick(); 
 }
