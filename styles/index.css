@@ -216,9 +216,9 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background-color: #f9f7f9;
 }
 
@@ -227,7 +227,45 @@ h3 {
 }
 
 .interaction .interaction__img {
-  margin: 100px;
+  width: 550px;
+  height: 340px;
+  background-image: url(../images/frente.png);
+  background-size: cover;
+}
+
+.interaction .interaction__img--front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(../images/frente.png);
+  background-size: cover;
+}
+
+.interaction .interaction__img--side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(../images/horizontal.png);
+  background-size: cover;
+}
+
+.interaction .interaction__img--down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 550px;
+  height: 240px;
+  background-image: url(../images/abajo.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.interaction .interaction__img--back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(../images/atras.png);
+  background-size: cover;
 }
 
 .interaction .interaction__options {
@@ -242,6 +280,7 @@ h3 {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 0px;
+  margin: 100px;
 }
 
 .interaction .interaction__options .list__views {

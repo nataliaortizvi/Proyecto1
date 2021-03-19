@@ -162,12 +162,12 @@ h3 {
             .content__text {
                 position: absolute;
                 margin: center;
-            }
-    
-            .content__text--whitechars{
-                position: absolute;
-                color: white;
-            }
+
+                &--whitechars{
+                    position: absolute;
+                    color: white;
+                }
+            }            
         }
     }
 }
@@ -177,7 +177,7 @@ h3 {
     display: flex;
     flex-direction:row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: rgb(249, 247, 249);
 
     .interaction__title {
@@ -185,7 +185,37 @@ h3 {
     }
 
     .interaction__img {
-        margin: 100px;
+        width: 550px;
+        height: 340px;
+        background-image: url(../images/frente.png);
+        background-size: cover;
+
+        &--front {
+            display: flex;
+            background-image: url(../images/frente.png);
+            background-size: cover;
+        }
+
+        &--side {
+            display: flex;
+            background-image: url(../images/horizontal.png);
+            background-size: cover;
+        }
+
+        &--down {
+            display: flex;
+            width: 550px;
+            height: 240px;
+            background-image: url(../images/abajo.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        &--back {
+            display: flex;
+            background-image: url(../images/atras.png);
+            background-size: cover;
+        }
     }
 
     .interaction__options {
@@ -193,6 +223,7 @@ h3 {
         flex-direction:column;
         align-items: flex-start;
         padding: 0px;
+        margin: 100px;
 
         .list__views {
             display: flex;
