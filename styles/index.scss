@@ -311,25 +311,39 @@ h3 {
 .gallery {
     display: flex;
     flex-direction:column;
-    justify-content: center;
     align-items: center;
     color: white;
 
     background-size: 100%;
-    height: 900px;
+    height: 735px;
+
+    H3 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
 
     &__current {
-        height: 500px;
+        height: 350px;
+        margin-bottom: 20px;
     }
 
     &__options {
+        background-color: rgba(0, 0, 0, 0.3);
         display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
     }
 
     &__small {
         height: 150px;
         width: 200px;
         margin: 40px;
+    }
+
+    &__small:hover {
+        transform: scale(1.2);
     }
 } 
 
