@@ -307,6 +307,32 @@ h3 {
     }
 }
 
+////////////////////GALLERY////////////////////
+.gallery {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    background-size: 100%;
+    height: 900px;
+
+    &__current {
+        height: 500px;
+    }
+
+    &__options {
+        display: flex;
+    }
+
+    &__small {
+        height: 150px;
+        width: 200px;
+        margin: 40px;
+    }
+} 
+
 ////////////////////NEWSLETTER////////////////////
 .newsletter {
     display: flex;
