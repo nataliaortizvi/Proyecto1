@@ -16,8 +16,6 @@ for(let i = 0; i < smalls.length; i++){
     if(i == 0) handleSmallClick(); 
 }
 
-
-
 //INTERACTION
 const radioButton = document.querySelectorAll('.views__button');
 const mainImage = document.querySelector('.interaction__img');

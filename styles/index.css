@@ -1,5 +1,7 @@
 @import url("https://use.typekit.net/sop3ack.css");
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap");
+@import url("https://use.typekit.net/sop3ack.css");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap");
 body {
   margin: 0px;
   font-family: Nunito;
@@ -10,7 +12,221 @@ body .container {
   margin: 0 auto;
 }
 
-h3 {
+h1 {
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-bottom: 0px;
+  font-size: 24px;
+  color: #111111;
+  font-weight: 500;
+  margin-left: 50px;
+}
+
+p {
+  margin: 0px;
+}
+
+.menupp {
+  background-color: #111111;
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  z-index: 100;
+}
+
+.menupp .menu__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.menupp .menu__links a {
+  text-decoration: none;
+  color: #b1b1b1;
+  font-weight: 300;
+  margin-left: 0px;
+  margin-right: 130px;
+}
+
+.menupp .menu__links :hover {
+  color: white;
+}
+
+.menupp .menu__links a {
+  position: relative;
+  display: block;
+  padding: 5px;
+}
+
+.menupp .menu__links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff8800), color-stop(#ffa600), to(#ffc400));
+  background: linear-gradient(to right, #ff8800, #ffa600, #ffc400);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.menupp .menu__links a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.menupp .menu__logo {
+  width: 55px;
+  height: 20px;
+  position: absolute;
+  left: 40px;
+}
+
+.menupp .menu__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 30px;
+}
+
+.menupp .menu__search .menu__input {
+  border-radius: 30px;
+  color: #f4f4f4;
+  border-style: none;
+  height: 23px;
+  width: 250px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.menupp .menu__search .menu__button {
+  margin-left: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0);
+}
+
+.menupp .menu__search .menu__button-bars {
+  display: none;
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.products .products__filters {
+  width: 250px;
+  height: 420px;
+  margin-right: 50px;
+}
+
+.products .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 900px;
+  margin-left: 20px;
+}
+
+.products .list .list__item {
+  border: 1px solid #d1d1d1;
+  width: 300px;
+  height: 450px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.products .list .list__item .item__img {
+  width: 100%;
+  height: 360px;
+}
+
+.products .list .list__item .item__title {
+  font-weight: 900;
+}
+
+.products .list .list__item .item__description {
+  font-weight: 200;
+  color: #a1a1a1;
+}
+
+.products .list .list__item .item__price {
+  margin-top: 12px;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+body {
+  margin: 0px;
+  font-family: Nunito;
+}
+
+body .container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h2 {
   font-size: 50px;
   font-family: Teko;
   color: 17, 17, 17;
@@ -38,18 +254,61 @@ h3 {
   z-index: 100;
 }
 
-.menu p {
-  color: #dddddd;
-  margin-right: 110px;
-  font-size: 15px;
+.menu .menu__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.menu .menu__links a {
+  text-decoration: none;
+  color: #b1b1b1;
   font-weight: 300;
+  margin-left: 0px;
+  margin-right: 130px;
+}
+
+.menu .menu__links :hover {
+  color: white;
+}
+
+.menu .menu__links a {
+  position: relative;
+  display: block;
+  padding: 5px;
+}
+
+.menu .menu__links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff8800), color-stop(#ffa600), to(#ffc400));
+  background: linear-gradient(to right, #ff8800, #ffa600, #ffc400);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.menu .menu__links a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .menu .menu__logo {
   width: 55px;
   height: 20px;
   position: absolute;
-  left: 30px;
+  left: 40px;
 }
 
 .menu .menu__search {
@@ -67,7 +326,7 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  right: 15px;
+  right: 30px;
 }
 
 .menu .menu__search .menu__input {
@@ -422,7 +681,7 @@ h3 {
   padding: 50px;
 }
 
-.specifications h3 {
+.specifications h2 {
   margin: 0px;
 }
 
@@ -451,7 +710,7 @@ h3 {
   height: 735px;
 }
 
-.gallery H3 {
+.gallery h2 {
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -483,8 +742,12 @@ h3 {
 }
 
 .gallery__small:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .newsletter {
@@ -518,7 +781,7 @@ h3 {
   margin-right: 100px;
 }
 
-.newsletter .newsletter__titles h3 {
+.newsletter .newsletter__titles h2 {
   margin: 0px;
   line-height: 1;
   font-size: 40px;
@@ -639,20 +902,20 @@ h3 {
   .container {
     width: 100%;
   }
-  .container h3 {
+  .container h2 {
     font-size: 42px;
   }
   .container .menu {
     width: 100%;
+  }
+  .container .menu .menu__links {
+    display: none;
   }
   .container .menu .menu__logo {
     width: 42px;
     height: 15px;
     position: absolute;
     left: 30px;
-  }
-  .container .menu p {
-    display: none;
   }
   .container .menu .menu__input {
     display: none;
@@ -786,7 +1049,7 @@ h3 {
             justify-content: center;
     margin-right: 0px;
   }
-  .container .newsletter .newsletter__titles h3 {
+  .container .newsletter .newsletter__titles h2 {
     font-size: 35px;
     text-align: center;
   }
@@ -845,10 +1108,6 @@ h3 {
     width: 300px;
     margin-top: 0px;
     margin-left: 0px;
-  }
-  .container .gallery__small:hover {
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 /*# sourceMappingURL=index.css.map */

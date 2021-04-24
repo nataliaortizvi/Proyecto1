@@ -1,3 +1,5 @@
+@import 'products';
+@import 'item';
 @import url("https://use.typekit.net/sop3ack.css");
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 
@@ -11,7 +13,7 @@ body {
     }
 }
 
-h3 {
+h2 {
     font-size: 50px;
     font-family: Teko;
     color: (17,17,17); 
@@ -32,19 +34,53 @@ h3 {
     
     margin:0 auto;
     z-index: 100;
+  
+    //NAVIGATION LINK OPTIONS 
+    .menu__links {
+        display:flex;
+        flex-direction: row;
 
-    p{
-        color: rgb(221, 221, 221);
-        margin-right: 110px;
-        font-size: 15px;
-        font-weight: 300;
+        a {
+            text-decoration: none;
+            color: rgb(177, 177, 177);
+            font-weight:300;
+            margin-left: 0px;
+            margin-right: 130px;
+        }
+
+        :hover {
+            color: rgb(255, 255, 255);
+        }
+    }
+  
+    .menu__links a {
+        position: relative;
+        display: block;
+        padding: 5px;
     }
 
+    .menu__links a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, #ff8800, #ffa600, #ffc400);
+        transform: scaleX(0);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .menu__links a:hover::before {
+        transform: scaleX(1);
+    }
+
+    //SEARCHING BAR
     .menu__logo {
         width: 55px;
         height: 20px;
         position: absolute;
-        left: 30px;
+        left: 40px;
     }
     
     .menu__search {
@@ -54,7 +90,7 @@ h3 {
         justify-content: center;
 
         position: absolute;
-        right: 15px;
+        right: 30px;
 
         .menu__input {
             border-radius: 30px;
@@ -328,7 +364,7 @@ h3 {
     background-color: rgb(240,240,240);
     padding: 50px;
 
-    h3 {
+    h2 {
         margin: 0px;
     }
 
@@ -352,7 +388,7 @@ h3 {
     background-size: 100%;
     height: 735px;
 
-    H3 {
+    h2 {
         margin-top: 30px;
         margin-bottom: 10px;
     }
@@ -378,7 +414,8 @@ h3 {
     }
 
     &__small:hover {
-        transform: scale(1.2);
+        transform: scale(1.3);
+        transition: transform 0.5s ease-in-out;
     }
 } 
 
@@ -399,7 +436,7 @@ h3 {
         flex-direction:column;
         margin-right: 100px;
 
-        h3 {
+        h2 {
             margin: 0px;
             line-height: 1;
             font-size: 40px;
@@ -487,7 +524,7 @@ h3 {
     .container {
         width:100%;
 
-        h3 {
+        h2 {
             font-size: 42px;
         }
 
@@ -495,15 +532,15 @@ h3 {
         .menu {
             width: 100%;
 
+            .menu__links {
+                display: none;
+            }
+
             .menu__logo {
                 width: 42px;
                 height: 15px;
                 position: absolute;
                 left: 30px;
-            }
-
-            p {
-                display: none;
             }
              
             .menu__input {
@@ -646,7 +683,7 @@ h3 {
                 justify-content: center;
                 margin-right: 0px;
 
-                h3 { 
+                h2 { 
                     font-size: 35px;
                     text-align: center;
                 }
@@ -707,10 +744,6 @@ h3 {
                 width: 300px;
                 margin-top: 0px;
                 margin-left: 0px;
-            }
-
-            &__small:hover {
-                transform: scale(1);
             }
         }
     }
