@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Formulario de Productos</title>
+</head>
+<body>
+
+    <form class="productForm">
+
+        <label class="productForm__label">
+            Nombre
+            <input class="productForm__input" name="name" type="text" placeholder="Nombre del producto">
+        </label>
+
+        <label class="productForm__label">Colores</label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="color_blanco" type="checkbox">
+            blanco
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="color_negro" type="checkbox" >
+            negro
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="color_rosa" type="checkbox" >
+            rosa
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="color_azul" type="checkbox" >
+            azul
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="color_rojo" type="checkbox" >
+            rojo
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="color_verde" type="checkbox" >
+            verde
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="color_amarillo" type="checkbox" >
+            amarillo
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="color_morado" type="checkbox" >
+            morado
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="color_naranja" type="checkbox" >
+            naranja
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="color_gris" type="checkbox" >
+            gris
+        </label>
+
+        <label class="productForm__label">Género</label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="gender_mujer" type="checkbox">
+           mujer
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="gender_hombre" type="checkbox">
+           hombre
+        </label>
+
+        <label class="productForm__label">
+            Precio
+            <input class="productForm__input" name="price" type="number" placeholder="Precio del producto">
+        </label>
+
+        <button class="productForm__btn" type="submit">Enviar</button>
+        
+
+    </form>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+
+    <script src="scripts/productForm.js"></script>
+</body>
+</html>

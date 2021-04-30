@@ -1,5 +1,6 @@
 @import 'products';
 @import 'item';
+@import '_productForm';
 @import url("https://use.typekit.net/sop3ack.css");
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 
@@ -13,10 +14,29 @@ body {
     }
 }
 
+h1 {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    color: rgb(17, 17, 17);
+    font-weight: 500;
+    margin-left: 50px;
+}
+
 h2 {
     font-size: 50px;
     font-family: Teko;
     color: (17,17,17); 
+}
+
+h3{
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    margin: 0px;
 }
 
 

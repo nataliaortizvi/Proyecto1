@@ -1,0 +1,16 @@
+.productForm {
+
+    &__label {
+        display: block;
+        margin-top: 10px;
+    }
+    
+    &__input {
+        display: block;
+    }
+
+    &__btn {
+        margin-top: 20px;
+        display: block;
+    }
+}
