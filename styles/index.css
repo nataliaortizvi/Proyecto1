@@ -206,6 +206,28 @@
   display: block;
 }
 
+.productForm__success {
+  color: green;
+}
+
+.productForm__error {
+  color: red;
+}
+
+.productForm__spaces {
+  color: red;
+}
+
+.productForm__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden {
+  display: none !important;
+}
+
 body {
   margin: 0px;
   font-family: Nunito;
@@ -814,36 +836,24 @@ p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-
-.newsletter .newsletter__form ::-webkit-input-placeholder {
-  color: white;
-}
-
-.newsletter .newsletter__form :-ms-input-placeholder {
-  color: white;
-}
-
-.newsletter .newsletter__form ::-ms-input-placeholder {
-  color: white;
-}
-
-.newsletter .newsletter__form ::placeholder {
-  color: white;
-}
-
-.newsletter .newsletter__form .newsletter__input {
-  border-radius: 30px;
-  height: 35px;
-  border-color: white;
-  border-style: solid;
-  width: 300px;
-  background: transparent;
-  font-family: Nunito;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 100;
-  margin-right: 10px;
+  /*::placeholder {
+            color: white;
+        }
+    
+        .newsletter__input {
+            border-radius: 30px;
+            height: 35px;
+            border-color:  rgb(255, 255, 255);
+            border-style: solid;
+            width: 300px;
+            background: transparent;
+        
+            font-family: Nunito;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 100;
+            margin-right: 10px;
+        }*/
 }
 
 .newsletter .newsletter__form button {
@@ -856,7 +866,7 @@ p {
   color: #df6813;
   border-radius: 30px;
   border-color: white;
-  margin-top: 25px;
+  margin-top: 0px;
 }
 
 .footer {

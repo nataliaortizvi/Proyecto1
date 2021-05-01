@@ -1,6 +1,7 @@
 @import 'products';
 @import 'item';
 @import '_productForm';
+@import '_general';
 @import url("https://use.typekit.net/sop3ack.css");
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 
@@ -473,7 +474,7 @@ p {
         align-items: flex-start;
         justify-content: flex-start;
 
-        ::placeholder {
+        /*::placeholder {
             color: white;
         }
     
@@ -490,7 +491,7 @@ p {
             font-size: 16px;
             font-weight: 100;
             margin-right: 10px;
-        }
+        }*/ //REVISAR CUANDO HAGA EL LOGIN
     
         button {
             font-family: Nunito;
@@ -502,7 +503,7 @@ p {
             color: rgb(223, 104, 19);
             border-radius: 30px;
             border-color:  rgb(255, 255, 255);
-            margin-top: 25px;
+            margin-top: 0px;
         }
     }
 }

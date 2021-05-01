@@ -1,5 +1,5 @@
 .productForm {
-
+    
     &__label {
         display: block;
         margin-top: 10px;
@@ -12,5 +12,22 @@
     &__btn {
         margin-top: 20px;
         display: block;
+    }
+
+    &__success {
+        color: green;
+    }
+
+    &__error {
+        color: red;
+    }
+
+    &__spaces{
+        color: red;
+    }
+
+    &__images {
+        display: flex;
+        
     }
 }

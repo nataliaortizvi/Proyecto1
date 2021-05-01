@@ -11,6 +11,22 @@
 
     <form class="productForm">
 
+        <p class="productForm__loading hidden">
+            Cargando...
+        </p>
+
+        <p class="productForm__success hidden">
+            Documento añadido correctamente!
+        </p>
+
+        <p class="productForm__error hidden">
+            Error al intentar añadir el producto.
+        </p>
+
+        <p class="productForm__spaces hidden">
+            Por favor llene todos los campos.
+        </p>
+
         <label class="productForm__label">
             Nombre
             <input class="productForm__input" name="name" type="text" placeholder="Nombre del producto">
@@ -58,14 +74,12 @@
             gris
         </label>
 
-        <label class="productForm__label">Género</label>
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" name="gender_mujer" type="checkbox">
-           mujer
-        </label>
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" name="gender_hombre" type="checkbox">
-           hombre
+        <label class="productForm__label">Género
+            <select class="productForm__input" name="gender" >
+                <option value="">Selecciona el género</option>
+                <option name="gender_mujer" value="mujer">mujer</option>
+                <option name="gender_hombre" value="hombre">hombre</option>
+            </select>
         </label>
 
         <label class="productForm__label">
@@ -73,15 +87,22 @@
             <input class="productForm__input" name="price" type="number" placeholder="Precio del producto">
         </label>
 
-        <button class="productForm__btn" type="submit">Enviar</button>
+        <label class="productForm__label">
+            Imagen
+            <input accept=".jpg, .png" class="productForm__input" name="image" type="file">
+        </label>
+        <div class="productForm__images"></div> 
         
 
+        <button class="productForm__btn" type="submit">Enviar</button>
     </form>
-    
+
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-storage.js"></script>
 
+    <script src="scripts/general.js"></script>
     <script src="scripts/productForm.js"></script>
 </body>
 </html>
