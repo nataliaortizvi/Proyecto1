@@ -27,46 +27,18 @@ filters.addEventListener('change', function() {
     let productsCollection = db.collection('products')
 
     const colores = [];
-    filters.colors.forEach(function(checkbox, index){
+    filters.colors.forEach(function(checkbox){
         if(checkbox.checked){
-            switch(index) {
-                case 0:
-                    colores.push('blanco');
-                    break;
-                case 1:
-                    colores.push('negro');
-                    break;
-                case 2:
-                    colores.push('rosa');
-                    break;
-                case 3:
-                    colores.push('azul');
-                    break;
-                case 4:
-                    colores.push('azul');
-                    break;
-                case 5:
-                    colores.push('azul');
-                    break;
-                case 6:
-                    colores.push('azul');
-                    break;
-                case 7:
-                    colores.push('azul');
-                    break;
-                case 8:
-                    colores.push('azul');
-                    break;
-                case 9:
-                    colores.push('azul');
-                    break;
-            }
-        }
+            colores.push(checkbox.getAttribute('data-type'));
+        }   
     });
 
     if(colores.length > 0){
-        productsCollection = productsCollection.where('color', 'in', colores);
+        productsCollection = productsCollection.where('color', 'array-contains-any', colores);
     }
+
+    console.log("arreglo arriba", productsCollection.value);
+    console.log("arreglo mio", colores);
 
     if(filters.gender.value) {
         productsCollection = productsCollection.where('gender', '==' , filters.gender.value);
