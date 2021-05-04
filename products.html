@@ -34,19 +34,74 @@
 
          <!--////////////////////products////////////////////-->
        <section class="products">
-            <!--////////////////////filtros////////////////////-->
+            <!--////////////////////filters////////////////////-->
            <article class="products__filters">
                <p class="filters__title">Filtros</p>
 
                <form class = "filters">
 
-                <!--////////////////////genero////////////////////-->
+                <!--////////////////////gender////////////////////-->
                 <label class="productForm__label">Género
                     <select class="productForm__input" name="gender" >
                         <option value="">Selecciona el género</option>
-                        <option name="gender_mujer" value="mujer">mujer</option>
-                        <option name="gender_hombre" value="hombre">hombre</option>
+                        <option value="mujer">mujer</option>
+                        <option value="hombre">hombre</option>
                     </select>
+                </label>
+
+                <!--////////////////////price////////////////////-->
+                <label class="productForm__label">Precio
+                    <select class="productForm__input" name="price" >
+                        <option value="">Selecciona el precio</option>
+                        <option value="0">Menos de $50</option>
+                        <option value="1">$50 - $99</option>
+                        <option value="2">$100 - $149</option>
+                        <option value="3">$150 - $200</option>
+                        <option value="4">Más de $200</option>
+                    </select>
+                </label>
+
+                <!--////////////////////colores////////////////////-->
+                <label class="productForm__label">Colores</label>
+                <label class="productForm__label productForm__label--checkbox">
+                    <input class="productForm__checkbox" name="colors" type="checkbox">
+                    blanco
+                </label>
+                <label class="productForm__label productForm__label--checkbox">
+                    <input class="productForm__checkbox" name="colors" type="checkbox" >
+                    negro
+                </label>
+                <label class="productForm__label productForm__label--checkbox">
+                    <input class="productForm__checkbox" name="colors" type="checkbox" >
+                    rosa
+                </label>
+                <label class="productForm__label productForm__label--checkbox">
+                    <input class="productForm__checkbox" name="colors" type="checkbox" >
+                    azul
+                </label>
+                <label class="productForm__label productForm__label--checkbox">
+                    <input class="productForm__checkbox" name="colors" type="checkbox" >
+                    rojo
+                </label>
+                <label class="productForm__label productForm__label--checkbox">
+                    <input class="productForm__checkbox" name="colors" type="checkbox" >
+                    verde
+                </label>
+                <label class="productForm__label productForm__label--checkbox">
+                    <input class="productForm__checkbox" name="colors" type="checkbox" >
+                    amarillo
+                </label>
+                <label class="productForm__label productForm__label--checkbox">
+                    <input class="productForm__checkbox" name="colors" type="checkbox" >
+                    morado
+                </label>
+                <label class="productForm__label productForm__label--checkbox">
+                    <input class="productForm__checkbox" name="colors" type="checkbox" >
+                    naranja
+                </label>
+                <label class="productForm__label productForm__label--checkbox">
+                    <input class="productForm__checkbox" name="colors" type="checkbox" >
+                    gris
                 </label>
 
                </form>
