@@ -1,17 +1,15 @@
 const list = document.querySelector('.list');
 
-db.collection('products')
-.get()
-.then((querySnapshot) => {
+const handleCollectionResult = (querySnapshot) => {
+    list.innerHTML = '';
     querySnapshot.forEach((doc) => {
         const data = doc.data();
-        console.log(doc.id, data);
-        const product = document.createElement('article');
+        const product = document.createElement('a');
 
         product.innerHTML = `
-        <a href="#"><img class="item__img" src="${data.images[0].url}" alt=""></a>
+        <a href="#"><img class="item__img" src="${data.images[0]?.url}" alt=""></a>
         <div class="item__info">
-            <p class="item__title">${data.name}</p>
+            <a href="#"><p class="item__title">${data.name}</p></a>
             <p class="item__description">${data.gender}</p>
             <p class="item__price">${'$'+data.price}</p>
         </div> 
@@ -20,7 +18,26 @@ db.collection('products')
         
         list.appendChild(product);
     });
+}
+
+const filters = document.querySelector('.filters');
+
+filters.gender.addEventListener('change', function() {
+    console.log(filters.gender.value);
+
+    let productsCollection = db.collection('products')
+
+    if(filters.gender.value) {
+        productsCollection = productsCollection.where('gender', '==' , filters.gender.value);
+    }
+
+    productsCollection.get().then(handleCollectionResult);
 });
+
+
+db.collection('products')
+.get()
+.then(handleCollectionResult);
 
 
 /*products.sort(function(a,b) {

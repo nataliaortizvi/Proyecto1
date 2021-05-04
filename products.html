@@ -34,8 +34,22 @@
 
          <!--////////////////////products////////////////////-->
        <section class="products">
+            <!--////////////////////filtros////////////////////-->
            <article class="products__filters">
                <p class="filters__title">Filtros</p>
+
+               <form class = "filters">
+
+                <!--////////////////////genero////////////////////-->
+                <label class="productForm__label">Género
+                    <select class="productForm__input" name="gender" >
+                        <option value="">Selecciona el género</option>
+                        <option name="gender_mujer" value="mujer">mujer</option>
+                        <option name="gender_hombre" value="hombre">hombre</option>
+                    </select>
+                </label>
+
+               </form>
            </article>
 
            <section class="list"></section>
@@ -43,9 +57,21 @@
        </section>
 
 
-
-
-
+        <!--////////////////////footer////////////////////-->
+        <footer class="footer">
+            <img src="images/logo2.png">
+            
+            <section class="footer__menu">
+                <p>Home</p>
+                <p>Carrito</p>
+                <p>Productos</p>
+                <p>Cuenta</p>
+            </section>
+            
+            <p>Terms of UseNike Privacy PolicyCA Supply Chains Act<br>© 2021 Nike, Inc. All Rights Reserved</p>
+            <img src="images/logos.png" class="footer__logos">
+        </footer>
+        
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>

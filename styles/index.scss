@@ -20,7 +20,6 @@ h1 {
     margin-left: 50px;
     margin-bottom: 0px;
     font-size: 24px;
-    color: rgb(17, 17, 17);
     font-weight: 500;
     margin-left: 50px;
 }
@@ -209,6 +208,7 @@ p {
                 font-size: 25px;
                 font-weight: 500;
                 margin-bottom: 0px;
+                margin-left: 0px;
             }
 
             p {
@@ -234,46 +234,42 @@ p {
     display: flex;
     flex-direction:row;
     align-items: center;
-    justify-content: flex-start;
-    background-color: rgb(249, 247, 249);
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
 
     .interaction__title {
         margin-left: 50px;
+
+        h2 {
+            margin-bottom: 0px;
+
+        }
     }
 
     .interaction__img {
         width: 550px;
-        height: 340px;
+        height: 500px;
         background-image: url(../images/frente.png);
         background-size: cover;
-        margin: 100px;
+        margin: 50px;
+        background-position-y: -100px;
+        background-position-x: -30px;
 
         &--front {
-            display: flex;
             background-image: url(../images/frente.png);
-            background-size: cover;
         }
 
         &--side {
-            display: flex;
             background-image: url(../images/horizontal.png);
-            background-size: cover;
         }
 
         &--down {
-            display: flex;
-            width: 550px;
-            height: 240px;
             background-image: url(../images/abajo.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
+            background-position-y: -100px;
         }
 
         &--back {
-            display: flex;
-            height: 360px;
             background-image: url(../images/atras.png);
-            background-size: cover;
         }
     }
 
@@ -282,15 +278,17 @@ p {
         flex-direction:column;
         align-items: flex-start;
         padding: 0px;
-        margin: 0px;
-        margin-top: 150px;
-        margin-bottom: 150px;
+        margin-right: 150px;
 
         .list__views {
             display: flex;
             flex-direction:column;
             align-items: flex-start;
             justify-content: center;
+            padding: 0px;
+            margin-left: 60px;
+            margin-top: 0px;
+            margin-bottom: 0px;
         }
 
         input {

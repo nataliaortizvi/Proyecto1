@@ -162,10 +162,11 @@
           flex-grow: 1;
   width: 900px;
   margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .products .list .list__item {
-  border: 1px solid #d1d1d1;
+  border: 1px solid #e7e7e7;
   width: 300px;
   height: 450px;
   margin-left: 30px;
@@ -177,19 +178,34 @@
   height: 360px;
 }
 
-.products .list .list__item .item__title {
+.products .list .list__item a {
+  text-decoration: none;
+}
+
+.products .list .list__item a .item__title {
   font-weight: 900;
+  color: black;
+  margin-left: 10px;
+}
+
+.products .list .list__item a .item__title:hover {
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .products .list .list__item .item__description {
   font-weight: 200;
   color: #a1a1a1;
+  margin-left: 10px;
 }
 
 .products .list .list__item .item__price {
   margin-top: 12px;
   font-weight: 300;
   font-size: 17px;
+  margin-left: 10px;
 }
 
 .productForm__label {
@@ -243,7 +259,6 @@ h1 {
   margin-left: 50px;
   margin-bottom: 0px;
   font-size: 24px;
-  color: #111111;
   font-weight: 500;
   margin-left: 50px;
 }
@@ -478,6 +493,7 @@ p {
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 0px;
+  margin-left: 0px;
 }
 
 .about .about__info .information__block p {
@@ -506,58 +522,45 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  background-color: #f9f7f9;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: whitesmoke;
 }
 
 .interaction .interaction__title {
   margin-left: 50px;
 }
 
+.interaction .interaction__title h2 {
+  margin-bottom: 0px;
+}
+
 .interaction .interaction__img {
   width: 550px;
-  height: 340px;
+  height: 500px;
   background-image: url(../images/frente.png);
   background-size: cover;
-  margin: 100px;
+  margin: 50px;
+  background-position-y: -100px;
+  background-position-x: -30px;
 }
 
 .interaction .interaction__img--front {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-image: url(../images/frente.png);
-  background-size: cover;
 }
 
 .interaction .interaction__img--side {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-image: url(../images/horizontal.png);
-  background-size: cover;
 }
 
 .interaction .interaction__img--down {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 550px;
-  height: 240px;
   background-image: url(../images/abajo.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-position-y: -100px;
 }
 
 .interaction .interaction__img--back {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 360px;
   background-image: url(../images/atras.png);
-  background-size: cover;
 }
 
 .interaction .interaction__options {
@@ -572,9 +575,7 @@ p {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 0px;
-  margin: 0px;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-right: 150px;
 }
 
 .interaction .interaction__options .list__views {
@@ -591,6 +592,10 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0px;
+  margin-left: 60px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .interaction .interaction__options input {
