@@ -35,50 +35,71 @@
          <!--////////////////////products////////////////////-->
        <section class="products">
             <!--////////////////////filters////////////////////-->
-           <article class="products__filters">
-               <p class="filters__title">Filtros</p>
+            <article class="products__filters">
+                <p class="filters__title">Filtros</p>
 
-               <form class = "filters">
+                <div class="lines"></div>
+                
+                <form class = "filters">
+                    
+                    <!--////////////////////colores////////////////////-->
+                    <label class="filters__colors">Colores</label>
+                    
+                    <div class="colors__buttons">
+                        <input data-type="blanco" class="colors__blanco" name="colors" type="checkbox">                     
+                        <input data-type="negro" class="colors__negro" name="colors" type="checkbox" >                       
+                        <input data-type="rosa" class="colors__rosa" name="colors" type="checkbox" >                   
+                        <input data-type="azul" class="colors__azul" name="colors" type="checkbox" >                  
+                        <input data-type="rojo" class="colors__rojo" name="colors" type="checkbox" >                  
+                        <input data-type="verde" class="colors__verde" name="colors" type="checkbox" >                  
+                        <input data-type="amarillo" class="colors__amarillo" name="colors" type="checkbox" >                    
+                        <input data-type="morado" class="colors__morado" name="colors" type="checkbox" >                   
+                        <input data-type="naranja" class="colors__naranja" name="colors" type="checkbox" >
+                        <input data-type="gris" class="colors__gris" name="colors" type="checkbox" >
+                    </div>
+                    
+                    <div class="lines"></div>
+                    
+                    <!--////////////////////gender////////////////////-->
+                    <label>Género
+                        <select class="filters__input" name="gender" >
+                            <option value="">Selecciona el género</option>
+                            <option value="mujer">mujer</option>
+                            <option value="hombre">hombre</option>
+                        </select>
+                    </label>
+                    
+                    <div class="lines"></div>
+                    
+                    <!--////////////////////price////////////////////-->
+                    <label>Precio
+                        <select class="filters__input" name="price" >
+                            <option value="">Selecciona el precio</option>
+                            <option value="0">Menos de $50</option>
+                            <option value="1">$50 - $99</option>
+                            <option value="2">$100 - $149</option>
+                            <option value="3">$150 - $200</option>
+                            <option value="4">Más de $200</option>
+                        </select>
+                    </label>
+                    
+                    <div class="lines"></div>
+                    
+                    <!--////////////////////order////////////////////-->
+                    <label>Ordenar
+                        <select class="filters__input" name="orden" >
+                            <option value="">Ordenar por</option>
+                            <option value="price_desc">Precio (mayor a menor)</option>
+                            <option value="price_asc">Precio (menor a mayor)</option>
+                            <option value="alpha">Alfabetico (A - Z)</option>
+                            <option value="createdAt">Más reciente</option>
+                         </select>
+                    </label>
 
-                <!--////////////////////gender////////////////////-->
-                <label class="productForm__label">Género
-                    <select class="productForm__input" name="gender" >
-                        <option value="">Selecciona el género</option>
-                        <option value="mujer">mujer</option>
-                        <option value="hombre">hombre</option>
-                    </select>
-                </label>
-
-                <!--////////////////////price////////////////////-->
-                <label class="productForm__label">Precio
-                    <select class="productForm__input" name="price" >
-                        <option value="">Selecciona el precio</option>
-                        <option value="0">Menos de $50</option>
-                        <option value="1">$50 - $99</option>
-                        <option value="2">$100 - $149</option>
-                        <option value="3">$150 - $200</option>
-                        <option value="4">Más de $200</option>
-                    </select>
-                </label>
-
-                <!--////////////////////colores////////////////////-->
-                <label class="productForm__label">Colores</label>
-                <label class="productForm__label productForm__label--checkbox">
-                    <input data-type="blanco" class="productForm__checkbox" name="colors" type="checkbox">
-                    blanco
-                </label>
-                <label class="productForm__label productForm__label--checkbox">
-                    <input data-type="negro" class="productForm__checkbox" name="colors" type="checkbox" >
-                    negro
-                </label>
-                <label class="productForm__label productForm__label--checkbox">
-                    <input data-type="rosa" class="productForm__checkbox" name="colors" type="checkbox" >
-                    rosa
-                </label>
-              
-
-               </form>
-           </article>
+                    <div class="lines"></div>
+                    
+                </form>
+            </article>
 
            <section class="list"></section>
 
@@ -90,10 +111,10 @@
             <img src="images/logo2.png">
             
             <section class="footer__menu">
-                <p>Home</p>
-                <p>Carrito</p>
-                <p>Productos</p>
-                <p>Cuenta</p>
+                <a href="index.html" class="links__products" >Home</ahref></a>
+                <a href="products.html" class="links__products">Productos</ahref></a>
+                <a href="#">Nosotros</a>
+                <a href="#">Carrito</a>
             </section>
             
             <p>Terms of UseNike Privacy PolicyCA Supply Chains Act<br>© 2021 Nike, Inc. All Rights Reserved</p>

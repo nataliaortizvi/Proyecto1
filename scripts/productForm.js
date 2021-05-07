@@ -31,6 +31,7 @@ productForm.addEventListener('submit', function(event){
        price: parseInt(productForm.price.value),
        color: [],
        gender: productForm.gender.value,
+       createdAt: Date.now(),
    };
 
    if(productForm.color_blanco.checked) product.color.push('blanco');

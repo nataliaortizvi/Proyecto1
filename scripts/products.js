@@ -5,15 +5,16 @@ const handleCollectionResult = (querySnapshot) => {
     querySnapshot.forEach((doc) => {
         const data = doc.data();
         const product = document.createElement('a');
-
+        
         product.innerHTML = `
         <a href="#"><img class="item__img" src="${data.images[0]?.url}" alt=""></a>
         <div class="item__info">
-            <a href="#"><p class="item__title">${data.name}    (${data.color})</p></a>
-            <p class="item__description">${data.gender}</p>
-            <p class="item__price">${'$'+data.price}</p>
+        <a href="#"><p class="item__title">${data.name}</p></a>
+        <p class="item__description">${data.gender}</p>
+        <p class="item__price">${'$'+data.price}</p>
         </div> 
         `;
+        //<p>${new Date(data.createdAt)}</p>
         product.classList.add('list__item');
         
         list.appendChild(product);
@@ -22,10 +23,34 @@ const handleCollectionResult = (querySnapshot) => {
 
 const filters = document.querySelector('.filters');
 
+//function products changing
 filters.addEventListener('change', function() {
     
     let productsCollection = db.collection('products')
+    
+    //(3) types of order
+    if(filters.orden.value) {
+        switch(filters.orden.value){
+            case 'price_desc':
+                //descendent price order
+                productsCollection = productsCollection.orderBy('price', 'desc');
+                break;
+            case 'price_asc':
+                //ascendent price order
+                productsCollection = productsCollection.orderBy('price', 'asc');
+                break;
+            case 'alpha':
+                //alfabetic order
+                productsCollection = productsCollection.orderBy('name', 'asc');          
+                break;
+            case 'createdAt':
+                //most recent orde
+                productsCollection = productsCollection.orderBy('createdAt', 'desc');               
+                break;
+        }
+    }
 
+    //color filter (1)
     const colores = [];
     filters.colors.forEach(function(checkbox){
         if(checkbox.checked){
@@ -37,13 +62,12 @@ filters.addEventListener('change', function() {
         productsCollection = productsCollection.where('color', 'array-contains-any', colores);
     }
 
-    console.log("arreglo arriba", productsCollection.value);
-    console.log("arreglo mio", colores);
-
+    //gender filter (2)
     if(filters.gender.value) {
         productsCollection = productsCollection.where('gender', '==' , filters.gender.value);
     }
-
+  
+    //price filter (3)
     if(filters.price.value) {
         switch(filters.price.value){
             case '0':
@@ -63,6 +87,7 @@ filters.addEventListener('change', function() {
                 break;
         }
     }
+    
 
     productsCollection.get().then(handleCollectionResult);
 });

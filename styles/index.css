@@ -132,6 +132,7 @@
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 30px;
+  margin-bottom: 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -139,8 +140,239 @@
 
 .products .products__filters {
   width: 250px;
-  height: 420px;
+  height: 820px;
   margin-right: 50px;
+}
+
+.products .products__filters .lines {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #e6e6e6;
+  list-style: circle;
+  height: 2px;
+  width: 290px;
+}
+
+.products .products__filters .filters__colors {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.products .products__filters .filters .filters__colors {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.products .products__filters .filters .filters__input {
+  display: block;
+  margin-top: 10px;
+  background-color: #f1f1f1;
+  border: 0px;
+  height: 30px;
+  width: 200px;
+  color: #929292;
+}
+
+.products .products__filters .filters .colors__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100px;
+  width: 110%;
+}
+
+.products .products__filters .filters .colors__buttons .colors__blanco {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid gainsboro;
+  background-color: white;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.products .products__filters .filters .colors__buttons .colors__blanco:checked {
+  border: 5px solid gainsboro;
+}
+
+.products .products__filters .filters .colors__buttons .colors__negro {
+  margin-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0px solid gainsboro;
+  background-color: #313131;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.products .products__filters .filters .colors__buttons .colors__negro:checked {
+  border: 5px solid gainsboro;
+}
+
+.products .products__filters .filters .colors__buttons .colors__rosa {
+  margin-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0px solid gainsboro;
+  background-color: #ff90c7;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.products .products__filters .filters .colors__buttons .colors__rosa:checked {
+  border: 5px solid gainsboro;
+}
+
+.products .products__filters .filters .colors__buttons .colors__azul {
+  margin-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0px solid gainsboro;
+  background-color: #7dc5ff;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.products .products__filters .filters .colors__buttons .colors__azul:checked {
+  border: 5px solid gainsboro;
+}
+
+.products .products__filters .filters .colors__buttons .colors__rojo {
+  margin-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0px solid gainsboro;
+  background-color: #f85252;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.products .products__filters .filters .colors__buttons .colors__rojo:checked {
+  border: 5px solid gainsboro;
+}
+
+.products .products__filters .filters .colors__buttons .colors__verde {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0px solid gainsboro;
+  background-color: #50dd58;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.products .products__filters .filters .colors__buttons .colors__verde:checked {
+  border: 5px solid gainsboro;
+}
+
+.products .products__filters .filters .colors__buttons .colors__amarillo {
+  margin-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0px solid gainsboro;
+  background-color: #fff34e;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.products .products__filters .filters .colors__buttons .colors__amarillo:checked {
+  border: 5px solid gainsboro;
+}
+
+.products .products__filters .filters .colors__buttons .colors__morado {
+  margin-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0px solid gainsboro;
+  background-color: #c83eff;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.products .products__filters .filters .colors__buttons .colors__morado:checked {
+  border: 5px solid gainsboro;
+}
+
+.products .products__filters .filters .colors__buttons .colors__naranja {
+  margin-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0px solid gainsboro;
+  background-color: #ffb158;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.products .products__filters .filters .colors__buttons .colors__naranja:checked {
+  border: 5px solid gainsboro;
+}
+
+.products .products__filters .filters .colors__buttons .colors__gris {
+  margin-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0px solid gainsboro;
+  background-color: #838383;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+}
+
+.products .products__filters .filters .colors__buttons .colors__gris:checked {
+  border: 5px solid gainsboro;
 }
 
 .products .list {
@@ -162,7 +394,7 @@
           flex-grow: 1;
   width: 900px;
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .products .list .list__item {
@@ -170,7 +402,7 @@
   width: 300px;
   height: 450px;
   margin-left: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .products .list .list__item .item__img {
@@ -186,13 +418,12 @@
   font-weight: 900;
   color: black;
   margin-left: 10px;
+  height: 20px;
+  width: 290px;
 }
 
 .products .list .list__item a .item__title:hover {
-  -webkit-text-decoration-style: solid;
-          text-decoration-style: solid;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  font-size: 16.5px;
 }
 
 .products .list .list__item .item__description {
@@ -210,7 +441,11 @@
 
 .productForm__label {
   display: block;
-  margin-top: 10px;
+  margin-top: 30px;
+}
+
+.productForm__label--checkbox {
+  margin-top: 15px;
 }
 
 .productForm__input {
@@ -892,6 +1127,17 @@ p {
   padding: 30px;
 }
 
+.footer a {
+  color: white;
+  font-weight: 100;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  font-weight: 900;
+}
+
 .footer p {
   font-weight: 100;
   margin-left: 150px;
@@ -916,6 +1162,9 @@ p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  width: 120px;
+  margin-left: 150px;
+  margin-bottom: 5px;
 }
 
 .footer .footer__logos {

@@ -1,5 +1,5 @@
-@import 'products';
-@import 'item';
+@import '_products';
+@import '_item';
 @import '_productForm';
 @import '_general';
 @import url("https://use.typekit.net/sop3ack.css");
@@ -515,6 +515,18 @@ p {
     background-color: rgb(17,17,17);
     padding: 30px;
 
+    a {
+        color: rgb(255, 255, 255);
+        font-weight: 100;
+        margin-top: 5px;
+        text-decoration: none;
+
+    }
+    
+    a:hover {
+        font-weight: 900;
+    }
+
     p {
         font-weight: 100;
         margin-left: 150px;
@@ -530,6 +542,9 @@ p {
         flex-direction:column;
         align-items: flex-start;
         justify-content: flex-start;
+        width: 120px;
+        margin-left: 150px;
+        margin-bottom: 5px;
     }
 
     .footer__logos {
