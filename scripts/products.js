@@ -7,9 +7,9 @@ const handleCollectionResult = (querySnapshot) => {
         const product = document.createElement('a');
         
         product.innerHTML = `
-        <a href="#"><img class="item__img" src="${data.images[0]?.url}" alt=""></a>
+        <a href="./item.html?id=${doc.id}"><img class="item__img" src="${data.images[0]?.url}" alt=""></a>
         <div class="item__info">
-        <a href="#"><p class="item__title">${data.name}</p></a>
+        <a href="item.html?id=${doc.id}"><p class="item__title">${data.name}</p></a>
         <p class="item__description">${data.gender}</p>
         <p class="item__price">${'$'+data.price}</p>
         </div> 
@@ -27,28 +27,6 @@ const filters = document.querySelector('.filters');
 filters.addEventListener('change', function() {
     
     let productsCollection = db.collection('products')
-    
-    //(3) types of order
-    if(filters.orden.value) {
-        switch(filters.orden.value){
-            case 'price_desc':
-                //descendent price order
-                productsCollection = productsCollection.orderBy('price', 'desc');
-                break;
-            case 'price_asc':
-                //ascendent price order
-                productsCollection = productsCollection.orderBy('price', 'asc');
-                break;
-            case 'alpha':
-                //alfabetic order
-                productsCollection = productsCollection.orderBy('name', 'asc');          
-                break;
-            case 'createdAt':
-                //most recent orde
-                productsCollection = productsCollection.orderBy('createdAt', 'desc');               
-                break;
-        }
-    }
 
     //color filter (1)
     const colores = [];
@@ -87,12 +65,38 @@ filters.addEventListener('change', function() {
                 break;
         }
     }
+
+    //(3) types of order
+    if(filters.orden.value) {
+        switch(filters.orden.value){
+            case 'price_desc':
+                //descendent price order
+                productsCollection = productsCollection.orderBy('price', 'desc');
+                break;
+            case 'price_asc':
+                //ascendent price order
+                productsCollection = productsCollection.orderBy('price', 'asc');
+                break;
+            case 'alpha':
+                //alfabetic order
+                if(filters.price.value) {
+                    productsCollection = productsCollection.orderBy('price', 'asc');
+                }
+                productsCollection = productsCollection.orderBy('name', 'asc');          
+                break;
+            case 'createdAt':
+                //most recent order
+                if(filters.price.value) {
+                    productsCollection = productsCollection.orderBy('price', 'asc');
+                }
+                productsCollection = productsCollection.orderBy('createdAt', 'desc');               
+                break;
+        }
+    }
     
 
     productsCollection.get().then(handleCollectionResult);
 });
 
 
-db.collection('products')
-.get()
-.then(handleCollectionResult);
+db.collection('products').get().then(handleCollectionResult);
