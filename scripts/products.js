@@ -7,10 +7,10 @@ const handleCollectionResult = (querySnapshot) => {
         const product = document.createElement('a');
         
         product.innerHTML = `
-        <a href="./item.html?id=${doc.id}"><img class="item__img" src="${data.images[0]?.url}" alt=""></a>
+        <a href="./item.html?id=${doc.id}&name=${data.name}"><img class="item__img" src="${data.images[0]?.url}" alt=""></a>
         <div class="item__info">
         <a href="item.html?id=${doc.id}"><p class="item__title">${data.name}</p></a>
-        <p class="item__description">${data.gender}</p>
+        <p class="item__description">${'Zapato de '+data.gender}</p>
         <p class="item__price">${'$'+data.price}</p>
         </div> 
         `;
@@ -98,5 +98,6 @@ filters.addEventListener('change', function() {
     productsCollection.get().then(handleCollectionResult);
 });
 
+let productsCollection = db.collection('products')
 
-db.collection('products').get().then(handleCollectionResult);
+productsCollection.get().then(handleCollectionResult);

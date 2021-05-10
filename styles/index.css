@@ -439,6 +439,60 @@
   margin-left: 10px;
 }
 
+@media screen and (max-width: 650px) {
+  .container {
+    width: 100%;
+  }
+  .container .menupp {
+    width: 100%;
+  }
+  .container .menupp .menu__links {
+    display: none;
+  }
+  .container .menupp .menu__logo {
+    width: 42px;
+    height: 15px;
+    position: absolute;
+    left: 30px;
+  }
+  .container .menupp .menu__input {
+    display: none;
+  }
+  .container .menupp .menu__button-bars {
+    display: inline;
+    margin-left: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: rgba(0, 0, 0, 0);
+  }
+  .container .products {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .container .products .products__filters {
+    display: none;
+  }
+  .container .products .list {
+    margin: 0px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .container .products .list .list__item {
+    width: 150px;
+    height: 285px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .container .products .list .list__item .item__img {
+    width: 100%;
+    height: 190px;
+  }
+  .container .products .list .list__item a .item__title {
+    width: 100px;
+  }
+}
+
 .productForm__label {
   display: block;
   margin-top: 30px;
@@ -1144,7 +1198,7 @@ p {
   margin-top: 0px;
   margin-bottom: 0px;
   line-height: 2;
-  color: white;
+  color: #8a8a8a;
   text-align: center;
 }
 
@@ -1239,6 +1293,11 @@ p {
     width: 300px;
     height: 190px;
     margin: 30px 0px 30px 0px;
+    background-position-x: 0px;
+  }
+  .container .interaction .interaction__img--down {
+    width: 215px;
+    background-position-y: -40px;
   }
   .container .interaction .interaction__options {
     -webkit-box-align: start;
@@ -1339,9 +1398,13 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .container .footer a {
+    margin: 15px;
+  }
   .container .footer p {
     margin: 15px;
     margin-bottom: 40px;
+    color: #8a8a8a;
   }
   .container .footer .footer__menu {
     -webkit-box-orient: horizontal;
@@ -1351,6 +1414,12 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px;
+    width: 400px;
+    margin-bottom: 15px;
   }
   .container .footer .footer__logos {
     margin-left: 0px;
@@ -1381,6 +1450,9 @@ p {
     width: 300px;
     margin-top: 0px;
     margin-left: 0px;
+  }
+  .container .gallery__small:hover {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

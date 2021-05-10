@@ -533,7 +533,7 @@ p {
         margin-top: 0px;
         margin-bottom: 0px;
         line-height: 2;
-        color: rgb(255, 255, 255);
+        color:rgb(138, 138, 138);
         text-align: center;
     }
 
@@ -632,9 +632,16 @@ p {
             }
 
             .interaction__img {
-                width: 300px;
+                width:300px;
                 height: 190px;
                 margin: 30px 0px 30px 0px;
+                background-position-x: 0px;
+
+                &--down {
+                    width:215px;
+                    background-position-y: -40px;
+                }
+                
             }
 
             .interaction__options {
@@ -739,14 +746,23 @@ p {
         .footer {
             flex-direction: column;
 
+            a {
+                margin: 15px;
+            }
+
             p{
                 margin: 15px;
                 margin-bottom: 40px;
+                color:rgb(138, 138, 138);
             }
 
             .footer__menu {
                 flex-direction:row;
                 align-items: center;
+                justify-content: center;
+                margin: 0px;
+                width: 400px;
+                margin-bottom: 15px;
             }
 
             .footer__logos {
@@ -778,6 +794,10 @@ p {
                 width: 300px;
                 margin-top: 0px;
                 margin-left: 0px;
+            }
+
+            &__small:hover {
+                display: none;
             }
         }
     }

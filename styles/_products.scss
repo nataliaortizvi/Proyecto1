@@ -414,4 +414,76 @@
     }
 }
 
+////////////////////RESPONSIVE////////////////////
+@media screen and (max-width: 650px) {
+    .container {
+        width:100%;
+
+         ////////////////////MENU////////////////////
+         .menupp {
+            width: 100%;
+
+            .menu__links {
+                display: none;
+            }
+
+            .menu__logo {
+                width: 42px;
+                height: 15px;
+                position: absolute;
+                left: 30px;
+            }
+             
+            .menu__input {
+                display: none;
+            }
+                
+            .menu__button-bars {
+                display: inline;
+                margin-left: 10px;
+                background-color: rgba(0, 0, 0, 0.0);
+                border: rgba(0, 0, 0, 0.0);
+            }
+        }
+
+        ////////////////////PRODUCTS////////////////////
+        .products {
+            margin-left: 30px;
+            margin-right: 30px;
+
+            .products__filters{
+                display: none;
+            }
+    
+            .list {
+                margin: 0px;
+                justify-content: space-between;
+    
+                .list__item {
+                    width: 150px;
+                    height: 285px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 20px;
+    
+                    .item__img {
+                        width: 100%;
+                        height: 190px;
+                    }
+    
+                    a {
+                        .item__title {
+                            width: 100px;
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+
+
+
 
