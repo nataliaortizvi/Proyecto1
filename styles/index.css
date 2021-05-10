@@ -714,15 +714,24 @@ p {
 }
 
 .banner .banner__text .text__button {
-  background-color: #ff740f;
+  background: #ff740f;
   height: 40px;
   width: 200px;
   font-size: 17px;
   font-weight: 500;
-  color: #f4f4f4;
+  color: white;
   border-radius: 30px;
-  border-color: #ff740f;
   font-family: Nunito;
+  border-style: none;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.banner .banner__text .text__button:hover {
+  background: #da5b01;
+  width: 210px;
 }
 
 .about {
@@ -865,6 +874,7 @@ p {
           align-items: flex-start;
   padding: 0px;
   margin-right: 150px;
+  width: 220px;
 }
 
 .interaction .interaction__options .list__views {
@@ -892,16 +902,24 @@ p {
 }
 
 .interaction .interaction__options button {
-  font-family: Nunito;
-  margin-top: 10px;
-  background-color: #ff740f;
+  background: #ff740f;
   height: 40px;
   width: 200px;
   font-size: 17px;
   font-weight: 500;
   color: white;
   border-radius: 30px;
-  border-color: #ff740f;
+  font-family: Nunito;
+  border-style: none;
+  -webkit-box-shadow: 0px 5px 7px rgba(59, 59, 59, 0.4);
+          box-shadow: 0px 5px 7px rgba(59, 59, 59, 0.4);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.interaction .interaction__options button:hover {
+  background: #da5b01;
+  width: 210px;
 }
 
 .advertisement {
@@ -979,16 +997,25 @@ p {
 }
 
 .advertisement .advertisement__info button {
-  background-color: #ff740f;
+  margin-top: 15px;
+  background: #ff740f;
   height: 40px;
   width: 100px;
   font-size: 17px;
   font-weight: 500;
   color: white;
   border-radius: 30px;
-  border-color: #ff740f;
-  margin-top: 5px;
   font-family: Nunito;
+  border-style: none;
+  -webkit-box-shadow: 0px 5px 7px rgba(59, 59, 59, 0.4);
+          box-shadow: 0px 5px 7px rgba(59, 59, 59, 0.4);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.advertisement .advertisement__info button:hover {
+  background: #da5b01;
+  width: 110px;
 }
 
 .specifications {
@@ -1064,15 +1091,13 @@ p {
   height: 150px;
   width: 200px;
   margin: 40px;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
 }
 
 .gallery__small:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .newsletter {
@@ -1130,6 +1155,7 @@ p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  width: 220px;
   /*::placeholder {
             color: white;
         }
@@ -1151,16 +1177,25 @@ p {
 }
 
 .newsletter .newsletter__form button {
-  font-family: Nunito;
-  background-color: white;
+  margin-top: 0px;
+  background: white;
   height: 40px;
-  width: 310px;
+  width: 200px;
   font-size: 17px;
   font-weight: 500;
-  color: #df6813;
+  color: #da5b01;
   border-radius: 30px;
-  border-color: white;
-  margin-top: 0px;
+  font-family: Nunito;
+  border-style: none;
+  -webkit-box-shadow: 0px 5px 7px rgba(59, 59, 59, 0.4);
+          box-shadow: 0px 5px 7px rgba(59, 59, 59, 0.4);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.newsletter .newsletter__form button:hover {
+  background: #f0f0f0;
+  width: 210px;
 }
 
 .footer {
@@ -1444,8 +1479,6 @@ p {
     width: 300px;
   }
   .container .gallery__small {
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
     height: 250px;
     width: 300px;
     margin-top: 0px;
