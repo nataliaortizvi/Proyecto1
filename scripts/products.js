@@ -99,5 +99,18 @@ filters.addEventListener('change', function() {
 });
 
 let productsCollection = db.collection('products')
-
 productsCollection.get().then(handleCollectionResult);
+
+const filterBtn = document.querySelector('.products__filterBtn');
+const popup = document.querySelector('.products__filters-wrapper');
+const popupClose = document.querySelector('.filters__closeBtn');
+
+
+filterBtn.addEventListener('click', () => {
+    popup.style.display = 'flex';
+});
+
+popupClose.addEventListener('click', () => {
+    popup.style.background = 'rgba(0, 0, 0, 0.0);';
+});
+
