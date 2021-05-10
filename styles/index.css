@@ -559,7 +559,7 @@
   .container .products .products__filters-wrapper .products__filters .filters .colors__buttons * {
     margin-left: 5px;
   }
-  .container .products .products__filters-wrapper .products__filters .filters .filters__closeBtn {
+  .container .products .products__filters-wrapper .products__filters .filters__closeBtn {
     margin-top: 30px;
     background: #ff740f;
     height: 40px;
@@ -575,7 +575,7 @@
     -webkit-transition: 0.2s linear;
     transition: 0.2s linear;
   }
-  .container .products .products__filters-wrapper .products__filters .filters .filters__closeBtn:hover {
+  .container .products .products__filters-wrapper .products__filters .filters__closeBtn:hover {
     background: #da5b01;
     width: 210px;
   }

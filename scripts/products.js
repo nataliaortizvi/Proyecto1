@@ -111,6 +111,11 @@ filterBtn.addEventListener('click', () => {
 });
 
 popupClose.addEventListener('click', () => {
-    popup.style.background = 'rgba(0, 0, 0, 0.0);';
+    popup.style.display = 'none';
 });
 
+popup.addEventListener('click', e => {
+    if(e.target.className === 'products__filters-wrapper') {
+        popup.style.display = 'none';
+    }
+});
