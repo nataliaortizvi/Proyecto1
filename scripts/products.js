@@ -7,7 +7,8 @@ const handleCollectionResult = (querySnapshot) => {
         const product = document.createElement('a');
         
         product.innerHTML = `
-        <a href="./item.html?id=${doc.id}&name=${data.name}"><img class="item__img" src="${data.images[0]?.url}" alt=""></a>
+        <a href="./item.html?id=${doc.id}&name=${data.name}">
+        <img class="item__img" src="${data.images[0]?.url}" alt=""></a>
         <div class="item__info">
         <a href="item.html?id=${doc.id}"><p class="item__title">${data.name}</p></a>
         <p class="item__description">${'Zapato de '+data.gender}</p>
@@ -119,3 +120,17 @@ popup.addEventListener('click', e => {
         popup.style.display = 'none';
     }
 });
+
+//RESPONSIVE MENU
+// selector
+var menu = document.querySelector('.hamburger');
+
+// method
+function toggleMenu (event) {
+  this.classList.toggle('is-active');
+  document.querySelector( ".menuppal" ).classList.toggle("is_active");
+  event.preventDefault();
+}
+
+// event
+menu.addEventListener('click', toggleMenu, false);
