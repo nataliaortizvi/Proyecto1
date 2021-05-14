@@ -4,6 +4,7 @@ const handleCollectionResult = (querySnapshot) => {
     list.innerHTML = '';
     querySnapshot.forEach((doc) => {
         const data = doc.data();
+        console.log(doc.data());
         const product = document.createElement('a');
         
         product.innerHTML = `
@@ -41,12 +42,12 @@ filters.addEventListener('change', function() {
         productsCollection = productsCollection.where('color', 'array-contains-any', colores);
     }
 
-    //gender filter (2)
+    //gender filter (3)
     if(filters.gender.value) {
         productsCollection = productsCollection.where('gender', '==' , filters.gender.value);
     }
   
-    //price filter (3)
+    //price filter (4)
     if(filters.price.value) {
         switch(filters.price.value){
             case '0':
@@ -105,7 +106,7 @@ productsCollection.get().then(handleCollectionResult);
 const filterBtn = document.querySelector('.products__filterBtn');
 const popup = document.querySelector('.products__filters-wrapper');
 const popupClose = document.querySelector('.filters__closeBtn');
-
+const container = document.querySelector('.container');
 
 filterBtn.addEventListener('click', () => {
     popup.style.display = 'flex';
@@ -115,11 +116,11 @@ popupClose.addEventListener('click', () => {
     popup.style.display = 'none';
 });
 
-popup.addEventListener('click', e => {
+/*popup.addEventListener('click', e => {
     if(e.target.className === 'products__filters-wrapper') {
         popup.style.display = 'none';
     }
-});
+});*/
 
 //RESPONSIVE MENU
 // selector

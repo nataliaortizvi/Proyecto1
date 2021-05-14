@@ -115,11 +115,17 @@
     }
     
     .products__filters-wrapper {
+        display: block;
 
         .products__filters{
+            display: block;
             width: 250px;
             height: 820px;
             margin-right: 50px;
+
+            .filters__closeBtn {
+                display: none;
+            }
     
             .lines {
                 margin-top: 30px;
@@ -543,6 +549,7 @@
                     }
                     
                     .filters__closeBtn {
+                        display: block;
                         margin-top: 30px;
                         background: rgb(255, 116, 15);
                         height: 40px;

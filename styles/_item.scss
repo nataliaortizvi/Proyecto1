@@ -8,24 +8,131 @@
     &__img {
         height: 400px;
         margin-right: 30px;
+        margin-bottom: 100px;
     }
 
     &__info {
         display: flex;
         flex-direction:column;
 
-        .item__name {
-            margin: 0px;
+        .subtitle {
+            display: flex;
+            flex-direction:row;
+
+            .item__name {
+                margin: 0px;
+                font-weight: 700;
+                font-size: 28px;
+            }
+    
+            .item__price {
+                font-size: 30px;
+                font-weight: 400;
+                margin-left: 250px;
+            }
         }
 
         .item__gender {
             color: rgb(155, 155, 155);
-            font-weight: 2;
+            font-weight: 200;
         }
 
-        .item__price {
-            font-size: 30px;
-            font-weight: 5;
+        .item__sizes {
+
+            .sizes__title {
+                margin-top: 20px;
+                font-size: 15px;
+                font-weight: 600;
+                color: rgb(104, 104, 104);
+            }
+
+            .radio {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 70px;
+                width: 325px;
+
+                label {
+                    margin-right: 10px;
+                    margin-top: 10px;
+                    background-color: transparent;
+                    border: 1px solid rgb(211, 211, 211);
+                    display: inline-block;
+                    cursor: pointer;
+                    color: rgb(179, 179, 179);
+                    position: relative;
+                    padding: 5px 25px 5px 25px;
+                    border-radius: 50px 50px;
+                    transition: all 0.3s ease; 
+
+                    &:hover {
+                        background: rgb(235, 235, 235);
+                    }
+                }
+
+                input[type="radio"] {
+                    display: none;
+                }
+                input[type="radio"]:checked + label:before {
+                    display: none; 
+                }
+                input[type="radio"]:checked + label {
+                    padding: 5px 20px;
+                    border: 0px solid rgb(211, 211, 211);
+                    background: rgba(255, 116, 15, 0.8);
+                    border-radius: 50px 50px;
+                    color: #fff; 
+                }
+            }
+        }
+
+        p {
+            margin-top: 50px;
+            font-size: 15px;
+            font-weight: 600;
+            color: rgb(104, 104, 104);
+            margin-right: 10px;
+        }
+
+        .item__quantity {
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+
+            input {
+                display: block;
+                margin-right: 10px;
+                border: 1.5px solid rgb(184, 184, 184);
+                border-radius: 50px 50px;
+                background-color: rgb(241, 241, 241);
+                height: 30px;
+                width: 100px;
+                color: rgb(146, 146, 146);
+            }
+
+            button {
+                background: rgb(255, 116, 15);
+                height: 40px;
+                width: 200px;
+                font-size: 17px;
+                font-weight: 500;
+                color: rgb(255, 255, 255);
+                border-radius: 30px;
+                font-family: Nunito;
+                border-style: none;
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+                transition: 0.2s linear;
+
+                &:hover {
+                    background: rgb(218, 91, 1);
+                    width: 210px;
+                }
+            }
+        }
+
+        .item__quantity *{
+            margin-top: 10px;
         }
     }
 }

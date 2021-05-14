@@ -551,7 +551,7 @@ p {
     justify-content: center;
     background-color: rgb(17,17,17);
     padding: 30px;
-
+    
     a {
         color: rgb(255, 255, 255);
         font-weight: 100;
@@ -680,7 +680,7 @@ p {
             z-index: 1001;
         }
         .menuppal ul{
-        margin:70px 0px 0px 0px;
+        margin:0px 0px 0px 0px;
         padding:0;
         }
         .menuppal ul li { 
@@ -688,7 +688,7 @@ p {
             text-align:center;
             font-weight:200;
             font-size:19px;
-            height:60px;
+            margin-top: 40px;
             color:rgb(224, 224, 224);
         }
         .menuppal ul li a{

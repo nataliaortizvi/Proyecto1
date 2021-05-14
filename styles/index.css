@@ -156,10 +156,19 @@
   display: none;
 }
 
+.products .products__filters-wrapper {
+  display: block;
+}
+
 .products .products__filters-wrapper .products__filters {
+  display: block;
   width: 250px;
   height: 820px;
   margin-right: 50px;
+}
+
+.products .products__filters-wrapper .products__filters .filters__closeBtn {
+  display: none;
 }
 
 .products .products__filters-wrapper .products__filters .lines {
@@ -560,6 +569,7 @@
     margin-left: 5px;
   }
   .container .products .products__filters-wrapper .products__filters .filters__closeBtn {
+    display: block;
     margin-top: 30px;
     background: #ff740f;
     height: 40px;
@@ -622,6 +632,7 @@
 .item__img {
   height: 400px;
   margin-right: 30px;
+  margin-bottom: 100px;
 }
 
 .item__info {
@@ -634,18 +645,142 @@
           flex-direction: column;
 }
 
-.item__info .item__name {
+.item__info .subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.item__info .subtitle .item__name {
   margin: 0px;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.item__info .subtitle .item__price {
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: 250px;
 }
 
 .item__info .item__gender {
   color: #9b9b9b;
-  font-weight: 2;
+  font-weight: 200;
 }
 
-.item__info .item__price {
-  font-size: 30px;
-  font-weight: 5;
+.item__info .item__sizes .sizes__title {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #686868;
+}
+
+.item__info .item__sizes .radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 70px;
+  width: 325px;
+}
+
+.item__info .item__sizes .radio label {
+  margin-right: 10px;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid lightgray;
+  display: inline-block;
+  cursor: pointer;
+  color: #b3b3b3;
+  position: relative;
+  padding: 5px 25px 5px 25px;
+  border-radius: 50px 50px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.item__info .item__sizes .radio label:hover {
+  background: #ebebeb;
+}
+
+.item__info .item__sizes .radio input[type="radio"] {
+  display: none;
+}
+
+.item__info .item__sizes .radio input[type="radio"]:checked + label:before {
+  display: none;
+}
+
+.item__info .item__sizes .radio input[type="radio"]:checked + label {
+  padding: 5px 20px;
+  border: 0px solid lightgray;
+  background: rgba(255, 116, 15, 0.8);
+  border-radius: 50px 50px;
+  color: #fff;
+}
+
+.item__info p {
+  margin-top: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #686868;
+  margin-right: 10px;
+}
+
+.item__info .item__quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 5px;
+}
+
+.item__info .item__quantity input {
+  display: block;
+  margin-right: 10px;
+  border: 1.5px solid #b8b8b8;
+  border-radius: 50px 50px;
+  background-color: #f1f1f1;
+  height: 30px;
+  width: 100px;
+  color: #929292;
+}
+
+.item__info .item__quantity button {
+  background: #ff740f;
+  height: 40px;
+  width: 200px;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  border-radius: 30px;
+  font-family: Nunito;
+  border-style: none;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.item__info .item__quantity button:hover {
+  background: #da5b01;
+  width: 210px;
+}
+
+.item__info .item__quantity * {
+  margin-top: 10px;
 }
 
 .productForm__label {
@@ -1513,7 +1648,7 @@ p {
     z-index: 1001;
   }
   .container .menuppal ul {
-    margin: 70px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     padding: 0;
   }
   .container .menuppal ul li {
@@ -1521,7 +1656,7 @@ p {
     text-align: center;
     font-weight: 200;
     font-size: 19px;
-    height: 60px;
+    margin-top: 40px;
     color: #e0e0e0;
   }
   .container .menuppal ul li a {
