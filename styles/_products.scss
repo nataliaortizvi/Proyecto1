@@ -65,6 +65,26 @@
         position: absolute;
         left: 40px;
     }
+
+    .btnInOut { 
+        background: rgb(255, 116, 15);
+        height: 25px;
+        width: 100px;
+        font-size: 15;
+        margin-left: 10px;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        border-radius: 30px;
+        font-family: Nunito;
+        border-style: none;
+        box-shadow: 0px 5px 7px rgba(59, 59, 59, 0.4);
+        transition: 0.2s linear;
+    
+        &:hover {
+            background: rgb(218, 91, 1);
+            width: 110px;
+        }             
+    }
     
     .menu__search {
         display: flex;

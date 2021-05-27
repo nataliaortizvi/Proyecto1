@@ -34,7 +34,7 @@ authModal.innerHTML = `
         <p class="errorModal"></p>
 
         <div class="buttonsModal">
-            <button type="submit">Ingresar</button>
+            <button type="submit" class="authform__go">Ingresar</button>
             <button type="button" class="authform__register notengoBtn">No tengo cuenta</button>
             <button type="button" class="authform__login notengoBtn">Ya tengo una cuenta</button>
         </div>
@@ -52,6 +52,7 @@ const logFields = authModal.querySelector('.authform__logfield');
 const registerBtn = authModal.querySelector('.authform__register');
 const loginBtn = authModal.querySelector('.authform__login');
 const errorModal = authModal.querySelector('.errorModal');
+const authformGo = authModal.querySelector('.authform__go');
 
 
 //OPEN AND CLOSE MODAL
@@ -114,6 +115,7 @@ authForm.addEventListener('submit', function (event) {
             .then((userCredential) => {
                 //signed in
                 var user = userCredential.user;
+                modal.classList.add('hidden');
             })
             .catch((error) => {
                 errorModal.innerText = error.message; 
@@ -133,6 +135,8 @@ authForm.addEventListener('submit', function (event) {
                     email,
                 });
 
+                modal.classList.add('hidden');
+
             })
             .catch((error) => {
                 errorModal.innerText = error.message; 
@@ -148,6 +152,26 @@ logoutBtn.forEach(function(elem){
     elem.addEventListener('click', () => {
         firebase.auth().signOut();
     });
+});
+
+
+//RESPONSIVE MENU
+// selector
+const menu = document.querySelector('.hamburger');
+
+
+// method
+function toggleMenu (event) {
+    menu.classList.toggle('is-active');
+    document.querySelector( ".menuppal" ).classList.toggle("is_active");
+    event.preventDefault();
+}
+
+// event
+menu.addEventListener('click', toggleMenu, false);
+
+modalBtn.forEach(function(elem){
+    elem.addEventListener('click', toggleMenu, false);
 });
 
 

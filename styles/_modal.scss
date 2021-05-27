@@ -17,6 +17,7 @@
     }
 
     &__content {
+        border-radius: 5px;
         display: flex;
         flex-direction: column;
         padding: 20px;
@@ -44,13 +45,13 @@
                 border: 1px solid rgb(211, 211, 211);
                 border-radius: 50px 50px;
                 background-color: rgb(255, 255, 255);
-                color: rgb(184, 184, 184);
                 width: 350px;
                 padding: 3px;
                 justify-content: center;
-                font-size: 23px;
+                font-size: 15px;
                 font-weight: 100;
-                text-align: center;
+                color: rgb(184, 184, 184);
+                text-align: start;
             }
         }
 
@@ -118,10 +119,16 @@
         align-items: center;
         margin: 0px;
 
-        .modal__content{
+        &__content{
             width: 50%;
-            padding: 40px;
+            padding: 20px 40px;
             border-radius: 5px;
+
+            .labelForm {
+                input {
+                    width: 200px;
+                }
+            }
         }
 
         &__close {

@@ -1,4 +1,3 @@
-
 const params = new URLSearchParams(location.search);
 const id = params.get('id');
 
@@ -30,24 +29,13 @@ let productsCollection = db.collection('products')
         item__gender.innerText = `Zapato de ${data.gender}`;
         title__item.innerText = `Productos /  ${data.name}`;
         item__description.innerText = `${data.description}`;
+
+        const item__cartBtn = document.querySelector('.item__cartBtn');
+        item__cartBtn.addEventListener('click', function() {
+            cart.push(data);
+            localStorage.setItem('store__cart', JSON.stringify(cart));
+            cartBtnNumber.innerText = cart.length;
+        });
     });
 
 
-//RESPONSIVE MENU
-// selector
-const menu = document.querySelector('.hamburger');
-
-
-// method
-function toggleMenu (event) {
-  this.classList.toggle('is-active');
-  document.querySelector( ".menuppal" ).classList.toggle("is_active");
-  event.preventDefault();
-}
-
-// event
-menu.addEventListener('click', toggleMenu, false);
-
-modalBtn.forEach(function(elem){
-    elem.addEventListener('click', toggleMenu, false);
-});
