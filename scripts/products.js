@@ -118,11 +118,11 @@ popupClose.addEventListener('click', () => {
     popup.style.display = 'none';
 });
 
-/*popup.addEventListener('click', e => {
+popup.addEventListener('click', e => {
     if(e.target.className === 'products__filters-wrapper') {
         popup.style.display = 'none';
     }
-});*/
+});
 
 //RESPONSIVE MENU
 // selector

@@ -35,7 +35,8 @@ let productsCollection = db.collection('products')
 
 //RESPONSIVE MENU
 // selector
-var menu = document.querySelector('.hamburger');
+const menu = document.querySelector('.hamburger');
+
 
 // method
 function toggleMenu (event) {
@@ -46,3 +47,7 @@ function toggleMenu (event) {
 
 // event
 menu.addEventListener('click', toggleMenu, false);
+
+modalBtn.forEach(function(elem){
+    elem.addEventListener('click', toggleMenu, false);
+});

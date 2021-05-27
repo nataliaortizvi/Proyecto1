@@ -623,7 +623,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal__content {
@@ -646,6 +646,40 @@
   position: relative;
 }
 
+.modal__content h1 {
+  margin: 0px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.modal__content .labelForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #7e7e7e;
+}
+
+.modal__content .labelForm input {
+  display: block;
+  margin-right: 10px;
+  border: 1px solid lightgray;
+  border-radius: 50px 50px;
+  background-color: white;
+  color: #b8b8b8;
+  width: 350px;
+  padding: 3px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 23px;
+  font-weight: 100;
+  text-align: center;
+}
+
 .modal__content form {
   z-index: 800;
   display: -webkit-box;
@@ -655,13 +689,60 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal__content form * {
   margin-top: 10px;
+}
+
+.modal__content .buttonsModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.modal__content .buttonsModal button {
+  background: #ff740f;
+  height: 40px;
+  width: 200px;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  border-radius: 30px;
+  font-family: Nunito;
+  border-style: none;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  margin-bottom: 15px;
+}
+
+.modal__content .buttonsModal button:hover {
+  background: #da5b01;
+  width: 210px;
+}
+
+.modal__content .buttonsModal .notengoBtn {
+  background: #bdbdbd;
+}
+
+.modal__content .buttonsModal .notengoBtn:hover {
+  background: #8d8d8d;
 }
 
 .modal__close {
@@ -684,10 +765,9 @@
     margin: 0px;
   }
   .modal .modal__content {
-    width: 100%;
-    height: 50%;
-    margin: 0px;
-    padding: 50px;
+    width: 50%;
+    padding: 40px;
+    border-radius: 5px;
   }
   .modal__close {
     position: absolute;
@@ -881,6 +961,88 @@
   color: #a8a8a8;
   width: 800px;
   font-weight: 200;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    width: 100%;
+  }
+  .container .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 25px 50px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+  }
+  .container .item__img {
+    height: 390px;
+    margin: 0px;
+    margin-top: 120px;
+  }
+  .container .item__info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .container .item__info .subtitle {
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 0px;
+  }
+  .container .item__info .subtitle .item__price {
+    margin-left: 0px;
+    margin-top: 35px;
+    font-size: 25px;
+    font-weight: 200;
+  }
+  .container .item__info .item__gender {
+    position: absolute;
+    margin-top: 38px;
+    top: 0px;
+  }
+  .container .item__info .item__quantityTitle {
+    margin-bottom: 10px;
+  }
+  .container .item__info .item__quantity {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 40px;
+    width: 310px;
+  }
+  .container .item__info .item__quantity button {
+    margin: 0px;
+    height: 40px;
+  }
+  .container .item__info .item__quantity input {
+    margin: 0px;
+    height: 33px;
+  }
+  .container .item__info .item__description {
+    margin-top: 50px;
+    width: 310px;
+    margin-bottom: 50px;
+  }
 }
 
 .productForm__label {
@@ -1677,14 +1839,8 @@ p {
     position: absolute;
     left: 30px;
   }
-  .container .menu .menu__input {
+  .container .menu .menu__search {
     display: none;
-  }
-  .container .menu .menu__button-bars {
-    display: inline;
-    margin-left: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    border: rgba(0, 0, 0, 0);
   }
   .container .hamburger {
     display: block;

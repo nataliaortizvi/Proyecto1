@@ -7,33 +7,38 @@ authModal.innerHTML = `
      <button class="modal__close">X</button>
      <form class="authform">
 
-         <label class="authform__regfield labelFrom">
-             Nombre
-             <input type="text" name="name">
-         </label>
+        <h1 class="authform__regfield"> Registro </h1>
+        <h1 class="authform__logfield"> Iniciar sesión </h1>
 
-         <label class="authform__regfield labelFrom">
-             Apellido
-             <input type="text" name="lastname">
-         </label>
+        <label class="authform__regfield labelForm">
+        Nombre
+        <input type="text" name="name">
+        </label>
+
+        <label class="authform__regfield labelForm">
+            Apellido
+            <input type="text" name="lastname">
+        </label>
 
 
-         <label class="labelFrom">
-             Email
-             <input type="email" name="email">
-         </label>
+        <label class="labelForm">
+            Email
+            <input type="email" name="email">
+        </label>
 
-         <label class="labelFrom">
-             Contraseña
-             <input type="password" name="password">
-         </label>
+        <label class="labelForm">
+            Contraseña
+            <input type="password" name="password">
+        </label>
 
-         <p class="errorModal"></p>
+        <p class="errorModal"></p>
 
-         <button type="button" class="authform__register">Registrarse</button>
-         <button type="button" class="authform__login">Ya tengo una cuenta</button>
-         <button type="submit">Enviar</button>
-         
+        <div class="buttonsModal">
+            <button type="submit">Ingresar</button>
+            <button type="button" class="authform__register notengoBtn">No tengo cuenta</button>
+            <button type="button" class="authform__login notengoBtn">Ya tengo una cuenta</button>
+        </div>
+
      </form>
  </article>
 `;
@@ -43,6 +48,7 @@ document.body.appendChild(authModal);
 
 const authForm = authModal.querySelector('.authform');
 const regFields = authModal.querySelectorAll('.authform__regfield');
+const logFields = authModal.querySelector('.authform__logfield');
 const registerBtn = authModal.querySelector('.authform__register');
 const loginBtn = authModal.querySelector('.authform__login');
 const errorModal = authModal.querySelector('.errorModal');
@@ -66,23 +72,29 @@ modalBtn.forEach(function(elem){
 //CHANGE BETWEEN REGISTER AND LOGIN
 let isLogin = true;
 
+
+//LOGIN
 function handleGoToLogin() {
     regFields.forEach(function(elem){
         elem.classList.add('hidden');
     });
     loginBtn.classList.add('hidden');
     registerBtn.classList.remove('hidden');
+    logFields.classList.remove('hidden');
     isLogin = true;
 }
 
 loginBtn.addEventListener('click', handleGoToLogin);
 
+//REGISTER
 registerBtn.addEventListener('click', function (){
     regFields.forEach(function(elem){
         elem.classList.remove('hidden');
     });
     loginBtn.classList.remove('hidden');
     registerBtn.classList.add('hidden');
+    logFields.classList.add('hidden');
+    
     isLogin = false;
 });
 
@@ -96,6 +108,7 @@ authForm.addEventListener('submit', function (event) {
     const email = authForm.email.value;
     const password = authForm.password.value;
 
+    //LOG USER
     if(isLogin){
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
@@ -107,6 +120,7 @@ authForm.addEventListener('submit', function (event) {
             });
 
     }else{
+        //REGISTER USER
         firebase.auth().createUserWithEmailAndPassword(email, password)
             .then((userCredential) => {
                 //signed in
