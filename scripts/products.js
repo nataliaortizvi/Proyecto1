@@ -4,20 +4,22 @@ const handleCollectionResult = (querySnapshot) => {
     list.innerHTML = '';
     querySnapshot.forEach((doc) => {
         const data = doc.data();
-        console.log(doc.data());
-        const product = document.createElement('a');
+        const product = document.createElement('div');
         
         product.innerHTML = `
         <a href="./item.html?id=${doc.id}&name=${data.name}">
-        <img class="item__img" src="${data.images[0]?.url}" alt=""></a>
-        <div class="item__info">
-        <a href="item.html?id=${doc.id}"><p class="item__title">${data.name}</p></a>
-        <p class="item__description">${'Zapato de '+data.gender}</p>
-        <p class="item__price">${'$'+data.price}</p>
+            <img class="unity__img" src="${data.images[0]?.url}" alt="">
+        </a>
+        <div class="unity__info">
+            <a href="item.html?id=${doc.id}"><p class="unity__title">${data.name}</p></a>
+            <p class="unity__description">${'Zapato de '+data.gender}</p>
+            <p class="unity__price">${'$'+data.price}</p>
         </div> 
+
+        <button class="hidden showLoggedAdmin">Borrar</button>
         `;
         //<p>${new Date(data.createdAt)}</p>
-        product.classList.add('list__item');
+        product.classList.add('list__unity');
         
         list.appendChild(product);
     });

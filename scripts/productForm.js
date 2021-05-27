@@ -30,7 +30,6 @@ productForm.addEventListener('submit', function(event){
        name: productForm.name.value,
        price: parseInt(productForm.price.value),
        color: [],
-       sizes: [],
        gender: productForm.gender.value,
        createdAt: Date.now(),
    };
@@ -45,15 +44,6 @@ productForm.addEventListener('submit', function(event){
    if(productForm.color_morado.checked) product.color.push('morado');
    if(productForm.color_naranja.checked) product.color.push('naranja');
    if(productForm.color_gris.checked) product.color.push('gris');
-
-   if(productForm.size__35.checked) product.sizes.push('35');
-   if(productForm.size__36.checked) product.sizes.push('36');
-   if(productForm.size__37.checked) product.sizes.push('37');
-   if(productForm.size__38.checked) product.sizes.push('38');
-   if(productForm.size__39.checked) product.sizes.push('39');
-   if(productForm.size__40.checked) product.sizes.push('40');
-   if(productForm.size__41.checked) product.sizes.push('41');
-   if(productForm.size__42.checked) product.sizes.push('42');
 
    console.log(product);
 
@@ -126,5 +116,6 @@ productForm.addEventListener('submit', function(event){
         .catch(genericCatch); 
     }
 });
+
 
 

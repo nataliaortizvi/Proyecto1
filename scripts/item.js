@@ -11,11 +11,11 @@ const item__img = document.querySelector('.item__img');
 const item__name = document.querySelector('.item__name');
 const item__price = document.querySelector('.item__price');
 const item__gender = document.querySelector('.item__gender' );
-const title__item = document.querySelector('.title__item' );
+const title__item = document.querySelector('.title__item');
+const item__description = document.querySelector('.item__description');
 
-const item__sizes = document.querySelector('.item__sizes' );
 
-db.collection('products')
+let productsCollection = db.collection('products')
     .doc(id)
     .get()
     .then(function (doc) {
@@ -29,41 +29,8 @@ db.collection('products')
         item__price.innerText = `$ ${data.price}`;
         item__gender.innerText = `Zapato de ${data.gender}`;
         title__item.innerText = `Productos /  ${data.name}`;
-
-        //item__sizes.innerHTML = '';
-        const product = document.createElement('div');
-
-
-        product.innerHTML = `
-        <input type="radio" name="size" id=${data.sizes[0]}>
-        <label for=${data.sizes[0]}>${data.sizes[0]}</label>
-
-        <input type="radio" name="size" id=${data.sizes[1]}>
-        <label for=${data.sizes[1]}>${data.sizes[1]}</label>
-
-        <input type="radio" name="size" id=${data.sizes[2]}>
-        <label for=${data.sizes[2]}>${data.sizes[2]}</label>
-
-        <input type="radio" name="size" id=${data.sizes[3]}>
-        <label for=${data.sizes[3]}>${data.sizes[3]}</label>
-
-        <input type="radio" name="size" id=${data.sizes[4]}>
-        <label for=${data.sizes[4]}>${data.sizes[4]}</label>
-
-        <input type="radio" name="size" id=${data.sizes[5]}>
-        <label for=${data.sizes[5]}>${data.sizes[5]}</label>
-
-        <input type="radio" name="size" id=${data.sizes[6]}>
-        <label for=${data.sizes[6]}>${data.sizes[6]}</label>
-
-        <input type="radio" name="size" id=${data.sizes[7]}>
-        <label for=${data.sizes[7]}>${data.sizes[7]}</label>
-        `;
-
-        product.classList.add('radio');
-        item__sizes.appendChild(product);
+        item__description.innerText = `${data.description}`;
     });
-
 
 
 //RESPONSIVE MENU

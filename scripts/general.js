@@ -11,3 +11,21 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const storage = firebase.storage();
+ 
+let loggedUser = null;
+
+firebase.auth().onAuthStateChanged((user) => {
+  if(user) {
+    //User is signed in
+    db.collection('users').doc(user.uid).get().then(function(doc){
+      loggedUser = doc.data();
+      loggedUser.uid = user.uid;
+
+      userLoggedIn();
+    });
+  }else{ 
+    //User is signed out
+    userLoggedOut();
+  }
+});
+

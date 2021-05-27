@@ -18,13 +18,15 @@
                 <a href="./index.html" class="links__products" >Home</a>
                 <a href="./products.html" class="links__products" >Productos</a>
                 <a href="#" class="links__products" >Carrito</a>
-                <a href="#" class="links__products" >Registro</a>
             </div>
-
+            
             <!--search bar-->
             <section class="menu__search">
                 <input type="text" placeholder="  Buscar" class="menu__input">
+                <button class="modalBtn hideLoggedIn" >Iniciar sesión</button>
+                <button class="showLoggedIn logoutBtn" >Cerrar Sesión</button>
             </section>
+            
         </header> 
         
         <div class="hamburger">
@@ -37,7 +39,8 @@
               <li><a href="./index.html">Home</a></li>
               <li><a href="./products.html">Productos</a></li>
               <li><a href="#">Carrito</a></li>
-              <li><a href="#">Registro</a></li>
+              <li><a class="modalBtn hideLoggedIn" href="#">Iniciar sesión</a></li>
+              <li><a class="hidden showLoggedIn logoutBtn" href="#">Cerrar Sesión</a></li>
             </ul>
         </nav>
 
@@ -133,20 +136,25 @@
                 <a href="./index.html" class="links__products" >Home</ahref></a>
                 <a href="./products.html" class="links__products">Productos</ahref></a>
                 <a href="#">Carrito</a>
-                <a href="#">Registro</a>
             </section>
             
             <p>Terms of UseNike Privacy PolicyCA Supply Chains Act<br>© 2021 Nike, Inc. All Rights Reserved</p>
             <img src="images/logos.png" class="footer__logos">
         </footer>
+
+
+       
         
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
 
     <script src="scripts/general.js"></script>
+    <script src="scripts/authUtils.js"></script>
+    <script src="scripts/authModal.js"></script>
     <script src="scripts/products.js"></script>
 </body>
 </html>
