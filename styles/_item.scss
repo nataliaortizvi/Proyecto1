@@ -89,19 +89,6 @@
             }
         }
 
-        .item__quantityTitle {
-            margin-top: 50px;
-            font-size: 15px;
-            font-weight: 600;
-            color: rgb(104, 104, 104);
-            margin-right: 10px;
-        }
-
-        .item__quantity {
-            display: flex;
-            flex-direction: column;
-            margin-top: 5px;
-
             input {
                 display: block;
                 margin-right: 10px;
@@ -129,18 +116,13 @@
                 border-style: none;
                 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
                 transition: 0.2s linear;
-                margin-top: 30px;
+                margin-top: 50px;
 
                 &:hover {
                     background: rgb(218, 91, 1);
                     width: 210px;
                 }
             }
-        }
-
-        .item__quantity *{
-            margin-top: 10px;
-        }
 
         .item__description {
             margin-top: 50px;
@@ -194,27 +176,16 @@
                     margin-top: 38px;
                     top:0px;
                 }
-
-                .item__quantityTitle {
-                    margin-bottom: 10px;
-                }
-    
-                .item__quantity {
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                    height: 40px;
-                    width: 310px;
     
                     button {
-                        margin: 0px;
+                        margin: 50px 50px 0px 50px;
                         height: 40px;
                     }
                     input {
                         margin: 0px;
                         height: 33px;
                     }
-                }
+                
 
                 .item__description {
                     margin-top: 50px;

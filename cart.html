@@ -41,13 +41,18 @@
               <li><a href="./cart.html">Carrito</a></li>
               <li><a class="modalBtn hideLoggedIn" href="#">Iniciar sesión</a></li>
               <li><a class="hidden showLoggedIn logoutBtn" href="#">Cerrar Sesión</a></li>
+              <li><a href="./productForm.html" class="showLoggedAdmin hidden links__products" >Formulario</a></li>
             </ul>
         </nav>
 
         <h1>Carrito </h1>
 
         <div class="checkout">
+
+
             <section class="list"></section>
+
+
             <section class="checkout__summary">
                 <p>Resumen del pedido:</p>
                 <p class="checkout__total">Total: $ <span></span></p>
@@ -58,22 +63,22 @@
 
                     <label class="checkout__label">
                         Número de cédula
-                        <input type="number" name="identification">
+                        <input type="number" name="identification" class="inputCheckout1">
                     </label>
 
                     <label class="checkout__label">
                         Número de tarjeta
-                        <input type="number" name="creditCard">
+                        <input type="number" name="creditCard" class="inputCheckout2">
                     </label>
 
                     <label class="checkout__label">
                         Ciudad
-                        <input type="text" name="city">
+                        <input type="text" name="city" class="inputCheckout3">
                     </label>
 
                     <label class="checkout__label">
                         Dirección
-                        <input type="text" name="adress">
+                        <input type="text" name="adress" class="inputCheckout4">
                     </label>
 
                     <button type="submit" class="checkoutBtn">Ordenar</button>

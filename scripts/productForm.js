@@ -32,6 +32,7 @@ productForm.addEventListener('submit', function(event){
        price: parseInt(productForm.price.value),
        color: [],
        gender: productForm.gender.value,
+       description: productForm.description.value,
        createdAt: Date.now(),
    };
 
@@ -107,6 +108,7 @@ productForm.addEventListener('submit', function(event){
                     }).then(function (){
                         productForm__loading.classList.add('hidden');
                         productForm__success.classList.remove('hidden');
+                        location.href = './products.html'
                     })
                     .catch(genericCatch); 
                 })
@@ -116,7 +118,5 @@ productForm.addEventListener('submit', function(event){
         })
         .catch(genericCatch); 
     }
-
-    location.href = './products.html'
 });
 

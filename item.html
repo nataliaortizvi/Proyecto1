@@ -23,7 +23,7 @@
             <!--search bar-->
             <section class="menu__search">
                 <input type="text" placeholder="  Buscar" class="menu__input">
-                <button class="btnInOut hidden modalBtn hideLoggedIn" >Iniciar sesión</button>
+                <button class="btnInOut modalBtn hideLoggedIn" >Iniciar sesión</button>
                 <button class="btnInOut hidden showLoggedIn logoutBtn" >Cerrar Sesión</button>
             </section>
         </header> 
@@ -40,6 +40,7 @@
               <li><a href="./cart.html">Carrito</a></li>
               <li><a class="modalBtn hideLoggedIn" href="#">Iniciar sesión</a></li>
               <li><a class="hidden showLoggedIn logoutBtn" href="#">Cerrar Sesión</a></li>
+              <li><a href="./productForm.html" class="showLoggedAdmin hidden links__products" >Formulario</a></li>
             </ul>
         </nav>
 
@@ -57,7 +58,7 @@
                 
                 <p class="item__gender"></p>   
                 
-                <div class="item__sizes">
+                <form class="item__sizes">
                     <p class="sizes__title">Talla:</p>
                     <div class="radio">
                         <input type="radio" name="size" id="35">
@@ -84,13 +85,10 @@
                         <input type="radio" name="size" id="42">
                         <label for="42">42</label>
                     </div>
-                </div>
+                </form>
                 
-                <p class="item__quantityTitle">Cantidad</p>
-                <div class="item__quantity">
-                    <input value="0" type="number" min="0" max="5"> 
-                    <button class="showLoggedIn hidden item__cartBtn">Agregar al carrito</button>
-                </div>
+                <button class="showLoggedIn hidden item__cartBtn">Agregar al carrito</button>
+                
 
                 <p class="item__description"></p>
 

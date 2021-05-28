@@ -406,6 +406,13 @@
         height: 450px;
         margin-left: 30px;
         margin-bottom: 15px;
+        position: relative;
+
+        .deleteBtn {
+            position: absolute;
+            top:0px;
+            right: 0px;
+        }
 
         .unity__img {
             width: 100%;
@@ -513,6 +520,7 @@
                 align-items: center;
                 justify-content: center;
                 display: none;
+                z-index: 100;
 
                 .products__filters {
                     width: 200px;
@@ -577,7 +585,7 @@
     
                 .list__unity {
                     width: 150px;
-                    height: 285px;
+                    height: 330px;
                     margin-left: 10px;
                     margin-right: 10px;
                     margin-bottom: 20px;
@@ -590,6 +598,7 @@
                     a {
                         .unity__title {
                             width: 100px;
+                            margin-bottom: 50px;
                         }
                     }
                 }

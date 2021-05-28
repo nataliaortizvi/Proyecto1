@@ -7,6 +7,7 @@ const handleCollectionResult = (querySnapshot) => {
         const product = document.createElement('div');
         
         product.innerHTML = `
+        <button class="deleteBtn hidden showLoggedAdmin">Borrar</button>
         <a href="./item.html?id=${doc.id}&name=${data.name}">
             <img class="unity__img" src="${data.images[0]?.url}" alt="">
         </a>
@@ -15,10 +16,7 @@ const handleCollectionResult = (querySnapshot) => {
             <p class="unity__description">${'Zapato de '+data.gender}</p>
             <p class="unity__price">${'$'+data.price}</p>
         </div> 
-
-        <button class="hidden showLoggedAdmin">Borrar</button>
         `;
-        //<p>${new Date(data.createdAt)}</p>
         product.classList.add('list__unity');
         
         list.appendChild(product);
@@ -118,9 +116,8 @@ popupClose.addEventListener('click', () => {
     popup.style.display = 'none';
 });
 
-popup.addEventListener('click', e => {
+/*popup.addEventListener('click', e => {
     if(e.target.className === 'products__filters-wrapper') {
         popup.style.display = 'none';
     }
-});
-
+});*/

@@ -31,9 +31,9 @@ let productsCollection = db.collection('products')
         item__description.innerText = `${data.description}`;
 
         const item__cartBtn = document.querySelector('.item__cartBtn');
+        const item__sizes = document.querySelector('.item__sizes');
 
         item__cartBtn.addEventListener('click', function() {
-
             addToMyCart({
                 ...data,
                 id: doc.id,
