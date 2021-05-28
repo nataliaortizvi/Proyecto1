@@ -31,14 +31,15 @@ let productsCollection = db.collection('products')
         item__description.innerText = `${data.description}`;
 
         const item__cartBtn = document.querySelector('.item__cartBtn');
+
         item__cartBtn.addEventListener('click', function() {
+            if(sizesSelect)
+
 
             addToMyCart({
                 ...data,
                 id: doc.id,
             }); 
-            //localStorage.setItem('store__cart', JSON.stringify(cart));
-            //cartBtnNumber.innerText = cart.length;
         });
     });
 

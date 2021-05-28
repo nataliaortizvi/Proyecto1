@@ -1,4 +1,7 @@
 const list = document.querySelector('.list');
+const checkout__total = document.querySelector('.checkout__total span');
+const checkout__form = document.querySelector('.checkout__form');
+const checkoutBtn = document.querySelector('.checkoutBtn');
 
 let total = 0;
 
@@ -20,4 +23,11 @@ renderCart = () => {
         list.appendChild(product);
         total += data.price;
     });
+    checkout__total.innerText = total;
+
+    checkout__form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        
+    });
 }
+

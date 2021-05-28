@@ -48,9 +48,37 @@
 
         <div class="checkout">
             <section class="list"></section>
-            <section class="checkout__form">
+            <section class="checkout__summary">
                 <p>Resumen del pedido:</p>
                 <p class="checkout__total">Total: $ <span></span></p>
+                <div class="lines"></div>
+
+                <p>Información:</p>
+                <form class="checkout__form">
+
+                    <label class="checkout__label">
+                        Número de cédula
+                        <input type="number" name="identification">
+                    </label>
+
+                    <label class="checkout__label">
+                        Número de tarjeta
+                        <input type="number" name="tarjet">
+                    </label>
+
+                    <label class="checkout__label">
+                        Ciudad
+                        <input type="text" name="city">
+                    </label>
+
+                    <label class="checkout__label">
+                        Dirección
+                        <input type="text" name="adress">
+                    </label>
+
+                    <button type="submit" class="checkoutBtn">Ordenar</button>
+
+                </form>
             </section>
         </div>
 
