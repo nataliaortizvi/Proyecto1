@@ -5,7 +5,7 @@ const checkoutBtn = document.querySelector('.checkoutBtn');
 
 let total = 0;
 
-renderCart = () => {
+const renderCart = () => {
     cart.forEach((data) => {
         const product = document.createElement('div');
         product.innerHTML = `
@@ -27,7 +27,33 @@ renderCart = () => {
 
     checkout__form.addEventListener('submit', function (event) {
         event.preventDefault();
-        
+
+        const productIds = [];
+        cart.forEach(function(data){
+            productIds.push(data.id);
+        });
+
+        const order = {
+            identification: checkout__form.identification.value,
+            creditCard: checkout__form.creditCard.value,
+            city: checkout__form.city.value,
+            adress: checkout__form.adress.value,
+            date: Date.now(),
+            productIds: productIds,
+            total: total,
+            uid: loggedUser.uid,
+        };
+
+        ORDERS_COLLECTION.add(order)
+            .then(function (docRef) {
+                CART_COLLECTION.doc(loggedUser.uid).set({
+                    cart: [],
+                });
+
+                location.href = './products.html'
+
+                  
+            });
     });
 }
 

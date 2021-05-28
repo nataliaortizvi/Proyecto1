@@ -9,6 +9,41 @@
 </head>
 <body>
 
+     <!--////////////////////navigation menu////////////////////-->
+     <header class="menupp">
+        <img src="images/logo.png" class="menu__logo">
+
+        <div class="menu__links">
+            <a href="./index.html" class="links__products" >Home</a>
+            <a href="./products.html" class="links__products" >Productos</a>
+            <a href="./cart.html" class="cartBtn links__products">Carrito ( <span>0</span> )</a>
+            <a href="./productForm.html" class="showLoggedAdmin hidden links__products" >Formulario</a>
+        </div>
+        
+        <!--search bar-->
+        <section class="menu__search">
+            <input type="text" placeholder="  Buscar" class="menu__input">
+            <button class="btnInOut hidden modalBtn hideLoggedIn" >Iniciar sesión</button>
+            <button class="btnInOut hidden showLoggedIn logoutBtn" >Cerrar Sesión</button>
+        </section>
+        
+    </header> 
+    
+    <div class="hamburger">
+        <div class="_layer -top"></div>
+        <div class="_layer -mid"></div>
+        <div class="_layer -bottom"></div>
+    </div>
+    <nav class="menuppal">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./products.html">Productos</a></li>
+          <li><a href="./cart.html">Carrito</a></li>
+          <li><a class="modalBtn hideLoggedIn" href="#">Iniciar sesión</a></li>
+          <li><a class="hidden showLoggedIn logoutBtn" href="#">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
     <form class="productForm">
 
         <p class="productForm__loading hidden">
@@ -27,49 +62,51 @@
             Por favor llene todos los campos.
         </p>
 
+        <h1>Formulario para añadir nuevos productos</h1>
+
         <label class="productForm__label">
             Nombre
             <input class="productForm__input" name="name" type="text" placeholder="Nombre del producto">
         </label>
 
         <label class="productForm__label">Colores</label>
-        <label class="productForm__label productForm__label--checkbox">
+        <label class="productForm__label--checkbox">
             <input class="productForm__checkbox" name="color_blanco" type="checkbox">
             blanco
         </label>
-        <label class="productForm__label productForm__label--checkbox">
+        <label class="productForm__label--checkbox">
             <input class="productForm__checkbox" name="color_negro" type="checkbox" >
             negro
         </label>
-        <label class="productForm__label productForm__label--checkbox">
+        <label class="productForm__label--checkbox">
             <input class="productForm__checkbox" name="color_rosa" type="checkbox" >
             rosa
         </label>
-        <label class="productForm__label productForm__label--checkbox">
+        <label class="productForm__label--checkbox">
             <input class="productForm__checkbox" name="color_azul" type="checkbox" >
             azul
         </label>
-        <label class="productForm__label productForm__label--checkbox">
+        <label class="productForm__label--checkbox">
             <input class="productForm__checkbox" name="color_rojo" type="checkbox" >
             rojo
         </label>
-        <label class="productForm__label productForm__label--checkbox">
+        <label class="productForm__label--checkbox">
             <input class="productForm__checkbox" name="color_verde" type="checkbox" >
             verde
         </label>
-        <label class="productForm__label productForm__label--checkbox">
+        <label class="productForm__label--checkbox">
             <input class="productForm__checkbox" name="color_amarillo" type="checkbox" >
             amarillo
         </label>
-        <label class="productForm__label productForm__label--checkbox">
+        <label class="productForm__label--checkbox">
             <input class="productForm__checkbox" name="color_morado" type="checkbox" >
             morado
         </label>
-        <label class="productForm__label productForm__label--checkbox">
+        <label class="productForm__label--checkbox">
             <input class="productForm__checkbox" name="color_naranja" type="checkbox" >
             naranja
         </label>
-        <label class="productForm__label productForm__label--checkbox">
+        <label class="productForm__label--checkbox">
             <input class="productForm__checkbox" name="color_gris" type="checkbox" >
             gris
         </label>
@@ -96,6 +133,21 @@
 
         <button class="productForm__btn" type="submit">Enviar</button>
     </form>
+
+    <!--////////////////////footer////////////////////-->
+    <footer class="footer">
+        <img src="images/logo2.png">
+        
+        <section class="footer__menu">
+            <a href="./index.html" class="links__products" >Home</ahref></a>
+            <a href="./products.html" class="links__products">Productos</ahref></a>
+            <a href="./cart.html">Carrito</a>
+            
+        </section>
+        
+        <p>Terms of UseNike Privacy PolicyCA Supply Chains Act<br>© 2021 Nike, Inc. All Rights Reserved</p>
+        <img src="images/logos.png" class="footer__logos">
+    </footer>
 
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>

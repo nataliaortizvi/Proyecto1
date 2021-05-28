@@ -33,8 +33,6 @@ let productsCollection = db.collection('products')
         const item__cartBtn = document.querySelector('.item__cartBtn');
 
         item__cartBtn.addEventListener('click', function() {
-            if(sizesSelect)
-
 
             addToMyCart({
                 ...data,

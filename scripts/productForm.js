@@ -6,6 +6,7 @@ const productForm__error = document.querySelector('.productForm__error');
 const productForm__spaces = document.querySelector('.productForm__spaces');
 const productForm__images = document.querySelector('.productForm__images');
 
+
 const imageFiles = [];
 
 
@@ -115,7 +116,7 @@ productForm.addEventListener('submit', function(event){
         })
         .catch(genericCatch); 
     }
+
+    location.href = './products.html'
 });
-
-
 

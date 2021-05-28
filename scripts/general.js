@@ -40,6 +40,7 @@ firebase.auth().onAuthStateChanged((user) => {
 let cart = [];
 const cartBtnNumber = document.querySelector('.cartBtn span');
 const CART_COLLECTION = db.collection('cart');
+const ORDERS_COLLECTION = db.collection('orders');
 
 const addToMyCart = (product) => {
   cart.push(product);
@@ -56,18 +57,10 @@ const getMyCart = (uid) => {
     if(cartBtnNumber) cartBtnNumber.innerText = data.cart.length;
     cart = data.cart;
 
-    if(renderCart) renderCart();
+    if(window.renderCart) renderCart();
   });
 }
 
-/*
-const cartFromLS = localStorage.getItem('store__cart');
-if(cartFromLS){
-    cart = JSON.parse(cartFromLS);
-    if(cartBtnNumber){
-      cartBtnNumber.innerText = cart.length;
-    }
-}*/
 
 
 
