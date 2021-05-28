@@ -387,76 +387,61 @@
         }
     }
 
-    /*.products__filters { 
-        max-width: 300px;
-        background: white;
-        padding: 30px;
+}
 
-        .lines {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            background-color: rgb(230, 230, 230);
-            list-style: circle;
-            height: 2px;
-            width: 190px;
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0px;
+    flex-grow: 1;
+    width: 900px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+
+    .list__unity {
+        border: 1px solid rgb(231, 231, 231);
+        width: 300px;
+        height: 450px;
+        margin-left: 30px;
+        margin-bottom: 15px;
+
+        .unity__img {
+            width: 100%;
+            height: 360px;
         }
-    }*/
 
+        a {
+            text-decoration: none;
 
-    .list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin: 0px;
-        flex-grow: 1;
-        width: 900px;
-        margin-left: 20px;
-        margin-bottom: 10px;
-    
-        .list__unity {
-            border: 1px solid rgb(231, 231, 231);
-            width: 300px;
-            height: 450px;
-            margin-left: 30px;
-            margin-bottom: 15px;
-    
-            .unity__img {
-                width: 100%;
-                height: 360px;
-            }
-
-            a {
-                text-decoration: none;
-
-                .unity__title {
-                    font-weight: 900;
-                    color: rgb(0, 0, 0);
-                    margin-left: 10px;
-                    height: 20px;
-                    width: 290px;
-                }
-
-
-                .unity__title:hover {
-                    font-size: 16.5px;
-                }
-            }
-        
-            .unity__description {
-                font-weight: 200;
-                color: rgb(161, 161, 161);
+            .unity__title {
+                font-weight: 900;
+                color: rgb(0, 0, 0);
                 margin-left: 10px;
-
+                height: 20px;
+                width: 290px;
             }
-        
-            .unity__price {
-                margin-top: 12px;
-                font-weight: 300;
-                font-size: 17px;
-                margin-left: 10px;
 
+
+            .unity__title:hover {
+                font-size: 16.5px;
             }
+        }
+    
+        .unity__description {
+            font-weight: 200;
+            color: rgb(161, 161, 161);
+            margin-left: 10px;
+
+        }
+    
+        .unity__price {
+            margin-top: 12px;
+            font-weight: 300;
+            font-size: 17px;
+            margin-left: 10px;
+
         }
     }
 }

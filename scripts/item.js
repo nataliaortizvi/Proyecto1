@@ -32,9 +32,13 @@ let productsCollection = db.collection('products')
 
         const item__cartBtn = document.querySelector('.item__cartBtn');
         item__cartBtn.addEventListener('click', function() {
-            cart.push(data);
-            localStorage.setItem('store__cart', JSON.stringify(cart));
-            cartBtnNumber.innerText = cart.length;
+
+            addToMyCart({
+                ...data,
+                id: doc.id,
+            }); 
+            //localStorage.setItem('store__cart', JSON.stringify(cart));
+            //cartBtnNumber.innerText = cart.length;
         });
     });
 

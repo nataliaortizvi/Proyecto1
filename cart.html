@@ -9,11 +9,66 @@
 </head>
 <body>
 
-    <section class="cartList">
+    <div class="container">
+           <!--////////////////////navigation menu////////////////////-->
+        <header class="menupp">
+            <img src="images/logo.png" class="menu__logo">
 
-    </section>
+            <div class="menu__links">
+                <a href="./index.html" class="links__products" >Home</a>
+                <a href="./products.html" class="links__products" >Productos</a>
+                <a href="./cart.html" class="cartBtn links__products">Carrito ( <span>0</span> )</a>
+            </div>
+            
+            <!--search bar-->
+            <section class="menu__search">
+                <input type="text" placeholder="  Buscar" class="menu__input">
+                <button class="btnInOut hidden modalBtn hideLoggedIn" >Iniciar sesión</button>
+                <button class="btnInOut hidden showLoggedIn logoutBtn" >Cerrar Sesión</button>
+            </section>
+            
+        </header> 
+        
+        <div class="hamburger">
+            <div class="_layer -top"></div>
+            <div class="_layer -mid"></div>
+            <div class="_layer -bottom"></div>
+        </div>
+        <nav class="menuppal">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./products.html">Productos</a></li>
+              <li><a href="./cart.html">Carrito</a></li>
+              <li><a class="modalBtn hideLoggedIn" href="#">Iniciar sesión</a></li>
+              <li><a class="hidden showLoggedIn logoutBtn" href="#">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
 
+        <h1>Carrito </h1>
 
+        <div class="checkout">
+            <section class="list"></section>
+            <section class="checkout__form">
+                <p>Resumen del pedido:</p>
+                <p class="checkout__total">Total: $ <span></span></p>
+            </section>
+        </div>
+
+        <!--////////////////////footer////////////////////-->
+        <footer class="footer">
+            <img src="images/logo2.png">
+            
+            <section class="footer__menu">
+                <a href="./index.html" class="links__products" >Home</ahref></a>
+                <a href="./products.html" class="links__products">Productos</ahref></a>
+                <a href="./cart.html">Carrito</a>
+                
+            </section>
+            
+            <p>Terms of UseNike Privacy PolicyCA Supply Chains Act<br>© 2021 Nike, Inc. All Rights Reserved</p>
+            <img src="images/logos.png" class="footer__logos">
+        </footer>
+    </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
@@ -22,6 +77,7 @@
 
     <script src="scripts/general.js"></script>
     <script src="scripts/authUtils.js"></script>
+    <script src="scripts/authModal.js"></script>
     <script src="scripts/cart.js"></script>
 </body>
 </html>

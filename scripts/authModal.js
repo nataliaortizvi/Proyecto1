@@ -129,12 +129,13 @@ authForm.addEventListener('submit', function (event) {
                 var user = userCredential.user;
                 console.log(user);
 
-                db.collection('users').doc(user.uid).set({
+                const userDoc = {
                     name,
                     lastname,
                     email,
-                });
-
+                };
+                db.collection('users').doc(user.uid).set(userDoc);
+                setLoggedUser(userDoc, user.uid);
                 modal.classList.add('hidden');
 
             })
@@ -146,7 +147,6 @@ authForm.addEventListener('submit', function (event) {
 
 //LOGOUT
 const logoutBtn = document.querySelectorAll('.logoutBtn');
-console.log(logoutBtn);
 
 logoutBtn.forEach(function(elem){
     elem.addEventListener('click', () => {
